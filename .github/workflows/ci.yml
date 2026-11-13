@@ -53,6 +53,19 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v7.0.1
 
+      # Worker migration tests reuse the web workspace's PGlite harness.
+      - name: Set up Node.js for database tests
+        uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '24'
+
+      - name: Enable Corepack for database tests
+        run: corepack enable
+
+      - name: Install database test dependencies
+        working-directory: .
+        run: pnpm install --frozen-lockfile
+
       # Release: https://github.com/actions/setup-python/releases/tag/v7.1.0
       - name: Set up Python
         uses: actions/setup-python@v7.1.0
