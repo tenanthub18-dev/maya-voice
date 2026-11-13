@@ -1,5 +1,23 @@
 # Latency brief: how a reply is produced and where the time goes
 
+## Safe phrase streaming and connection warmup — 2026-11-13
+
+The final speed pass retains gpt-4.1-mini/Soniox/Priya, prices, UI, dialogue
+policy, turn timings and native HTTP/1.1 cancellation. Four complete-word
+batches now flow continuously through native TOKEN-mode TTS instead of waiting
+for full sentences. Numeric groups stay intact before the existing transform.
+An optional bounded metadata GET warms each native OpenAI pool at start/after
+interruption without an extra completion or caller content. It never gates
+inference and is cancelled/joined on cleanup.
+
+New-model/Fast-tier trials did not clearly improve the full voice flow and were
+discarded, along with experimental pricing and prompt changes. No dependency,
+paid tier, filler acknowledgement, faster speech or reduced listening allowance
+was added. See SPEED-CHECKS-2026-11-13.md for the comparative samples and final
+public results: 16 replies p50=1195 ms, slowest 2220 ms; matched order p50
+1551→1148ms, with a slower outlier. Consistent sub-second performance remains an acceptance gate;
+do not equate server first-byte timing with what a physical phone hears.
+
 ## Conversation quality update — 2026-11-13
 
 Same gpt-4.1-mini/Soniox/Priya, sentence synthesis and turn timings. Compact

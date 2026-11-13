@@ -165,3 +165,25 @@
   corrected order/dashboard/usage/no-business-writes replay passed. Plan16vs29
   words, correction19vs31. Public median1.551s/slowest1.629s (4samples); response
   speed remains open. Access code/login and UI unchanged.
+
+## 2026-11-13 — Response streaming and connection warmup
+
+- Stream safe complete-word batches through the existing native Soniox TOKEN
+  sequencer, preserving numeric groups, exact text and interruption cleanup.
+  Existing UI/providers/model/Priya/prices/dialogue/listening rules retained.
+- Warm each native OpenAI pool with a bounded metadata-only GET at start/after
+  interruption, without extra inference or caller content. Cancel/join on
+  teardown; keep HTTP/1.1 cancellation and clear stale extras on model changes.
+- 957 worker / 764 web / 8 shared tests pass; web resource contention required a two-worker
+  run, without weakened timeouts. Independent source/config review found no
+  blockers. No added dependencies. Model/Fast-tier and prompt/pricing trials
+  were discarded after full-call measurements did not establish a clear win.
+- See SPEED-CHECKS-2026-11-13.md for measured evidence and unresolved sub-second,
+  physical-phone/native-speaker gates. No launch milestone is closed.
+
+- Final public technical checks: 5 delayed-audio calls, order/menu scenarios and
+  seven-language tags/scripts/English prices/dashboard/usage checks passed, no
+  business writes. 16-reply p50=1195 ms, slowest 2220 ms; matched order p50
+  1551→1148ms but slower outlier. Sub-second target not met; partial cost
+  estimates increased in these runs despite unchanged unit prices. Menu
+  verbosity/native/physical-phone rubrics remain open.

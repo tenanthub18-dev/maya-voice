@@ -17,6 +17,7 @@ from voice_receptionist_worker.security.redaction import redacted_logger
 
 from .config import ProviderConfigError, RuntimeConfig
 from .ack import AckPlayer, make_probe
+from .first_phrase import _phrase_words, configure_phrase_streaming
 from .latency import create_latency_observer
 from .prompt import build_greeting, build_system_prompt
 from .spoken_numbers import tts_text_transform
@@ -94,6 +95,7 @@ def _create_voice_llm(providers: Mapping[str, Any], system_instruction: str):
         from .openai_llm import OpenAILLMService
 
         return OpenAILLMService(
+            preconnect=config.get("preconnect", False),
             api_key=_require_env("OPENAI_API_KEY"),
             settings=OpenAILLMService.Settings(
                 model=config["model"],
@@ -293,9 +295,10 @@ def build_pipeline(
             model=providers["tts"]["model"],
             voice=providers["tts"]["voice"],
         ),
-        text_aggregation_mode=_tts_aggregation_mode(),
+        text_aggregation_mode=_tts_aggregation_mode(providers),
         text_transforms=[("*", tts_text_transform)],
     )
+    configure_phrase_streaming(tts, providers)
     tts_connected = asyncio.Event()
 
     @tts.event_handler("on_connected")
@@ -582,13 +585,16 @@ def _maybe_ack(providers, api_key, user_aggregator, tts, output, latency_path, c
     return player, make_probe(player, f"{latency_path}.content", call_id)
 
 
-def _tts_aggregation_mode():
-    """TOKEN streams LLM tokens straight into TTS (lower latency); SENTENCE waits for a full sentence."""
+def _tts_aggregation_mode(providers=None):
+    """Use native TOKEN sequencing for opt-in safe phrases; retain legacy defaults."""
     from pipecat.services.tts_service import TextAggregationMode
 
-    mode = os.environ.get("TTS_AGGREGATION", "sentence")
+    words = _phrase_words(providers)
+    mode = os.environ.get("TTS_AGGREGATION", "token" if words else "sentence")
     if mode not in {"sentence", "token"}:
         raise ValueError(f"TTS_AGGREGATION must be sentence or token, got {mode!r}")
+    if words and mode != "token":
+        raise ProviderConfigError("tts.phrase_words conflicts with TTS_AGGREGATION=sentence; requires token")
     return TextAggregationMode(mode)
 
 
@@ -860,9 +866,10 @@ def _build_browser_cascade(
             voice=providers["tts"]["voice"],
             language=Language(language.split("-")[0]),
         ),
-        text_aggregation_mode=_tts_aggregation_mode(),
+        text_aggregation_mode=_tts_aggregation_mode(providers),
         text_transforms=[("*", tts_text_transform)],
     )
+    configure_phrase_streaming(tts, providers)
 
     tool_schemas = build_tool_schemas()
     context = LLMContext(tools=tool_schemas)

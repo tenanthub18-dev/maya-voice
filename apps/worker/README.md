@@ -14,3 +14,12 @@ Voice replies use the compact conversation policy in pipeline/prompt.py. Require
 readbacks remain complete; English price speech keeps exact amounts with fewer
 words. The native OpenAI client now closes on per-call teardown, even when processor
 cleanup fails. No transport/dependency change or shared caller context is added. See ../../docs/QUALITY-CHECKS-2026-11-13.md for measured limits and checks.
+
+Response-speed settings in `../../config/providers.yaml` now enable
+`voice_llm.preconnect: true` (background metadata GET, no completion/caller text)
+and `tts.phrase_words: 4` (safe complete-word batches in the native Soniox TOKEN
+stream). Numbers, exact text, interruption cleanup and the existing voice/model
+remain intact. Disable with false/zero respectively. Conflicting explicit
+`TTS_AGGREGATION=sentence` is rejected when phrase streaming is enabled.
+See `../../docs/SPEED-CHECKS-2026-11-13.md` for experiments, public measurements
+and the unresolved sub-second/physical-phone acceptance gates.

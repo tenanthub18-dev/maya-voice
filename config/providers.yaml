@@ -18,6 +18,8 @@ voice_llm:
   provider: openai
   model: gpt-4.1-mini
   max_output_tokens: 512
+  # Metadata-only connection warmup; no extra completion or caller content.
+  preconnect: true
 voice_llm_fallback:
   provider: openai
   model: gpt-4.1
@@ -30,6 +32,9 @@ tts:
   provider: soniox
   model: tts-rt-v2
   voice: Priya
+  # Complete-word batches in one native TOKEN stream; preserves numeric groups.
+  # https://docs.soniox.com/tts/rt/real-time-generation
+  phrase_words: 4
 # Explicit operator warm only; no REST generation on the call audio path.
 # https://docs.soniox.com/tts/rest-api/generate-speech
 greeting:
