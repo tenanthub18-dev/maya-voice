@@ -1,0 +1,9 @@
+{
+  "_note": "Docs gave no literal example; shape derived from schema + features/scrape JSON example.",
+  "success": true,
+  "data": {
+    "markdown": "# Example ...",
+    "json": {"name": "..."},
+    "metadata": {"title": "...", "sourceURL": "https://example.com/menu", "url": "https://example.com/menu", "statusCode": 200}
+  }
+}

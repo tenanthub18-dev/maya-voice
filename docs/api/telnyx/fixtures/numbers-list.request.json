@@ -1,0 +1,18 @@
+{
+  "_source": "https://developers.telnyx.com/api-reference/phone-number-configurations/list-phone-numbers.md",
+  "_provenance": "composed: field names/shapes verbatim from source; values chosen by us. NOT a captured real response",
+  "body": {
+    "method": "GET",
+    "url": "https://api.telnyx.com/v2/phone_numbers",
+    "headers": {
+      "Authorization": "Bearer <TELNYX_API_KEY>",
+      "Accept": "application/json"
+    },
+    "query": {
+      "filter[status]": "active",
+      "filter[country_iso_alpha2]": "CA",
+      "page[size]": 20,
+      "page[number]": 1
+    }
+  }
+}

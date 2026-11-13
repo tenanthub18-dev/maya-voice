@@ -1,0 +1,31 @@
+{
+  "_source": "https://ai.google.dev/gemini-api/docs/generate-content/structured-output ; https://ai.google.dev/api/generate-content.md.txt (older responseMimeType/responseSchema samples)",
+  "_status": "TWO spellings seen in official docs. (A) Current legacy-doc REST sample: generationConfig.responseFormat.text{mimeType:'APPLICATION_JSON', schema} and SDK field response_json_schema (recommended). (B) Older reference samples: generationConfig.responseMimeType='application/json' + responseSchema. Which is accepted on gemini-3.5-flash-lite for REST is UNVERIFIED => test both at M0 and record in DECISIONS.md. The curl instance for (A) came through a summarizer paraphrase = UNVERIFIED verbatim. Unsupported/ignored keywords in schema: min/maxLength, uniqueItems, etc. (validate yourself in code). Supported: type, properties, required, additionalProperties, enum, format, minimum, maximum, items, prefixItems, minItems, maxItems, title, description, $ref.",
+  "variant_A_body": {
+    "systemInstruction": { "parts": [ { "text": "Summarize the phone call. Output JSON only." } ] },
+    "contents": [ { "role": "user", "parts": [ { "text": "<call transcript>" } ] } ],
+    "generationConfig": {
+      "maxOutputTokens": 800,
+      "responseFormat": {
+        "text": {
+          "mimeType": "APPLICATION_JSON",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "summary": { "type": "string" },
+              "language": { "type": "string" },
+              "outcome": { "type": "string", "enum": ["reservation", "order", "question", "transfer", "other"] },
+              "follow_up_needed": { "type": "boolean" }
+            },
+            "required": ["summary", "language", "outcome", "follow_up_needed"]
+          }
+        }
+      }
+    }
+  },
+  "variant_B_generationConfig": {
+    "maxOutputTokens": 800,
+    "responseMimeType": "application/json",
+    "responseSchema": { "type": "object", "properties": { "summary": { "type": "string" } }, "required": ["summary"] }
+  }
+}

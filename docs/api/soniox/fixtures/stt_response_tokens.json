@@ -1,0 +1,13 @@
+{
+  "_source": "https://soniox.com/docs/api-reference/stt/websocket-api.mdx (response shape, docs example uses speaker); https://soniox.com/docs/stt/concepts/language-identification.mdx (language field)",
+  "_status": "Shape VERIFIED. Token text values here are illustrative (our fixture), the 'language' value on a token is documented as an ISO code like 'de','es'. With enable_language_identification=true each token carries 'language'. No fr-CA: STT/TTS list base code 'fr' only.",
+  "message": {
+    "tokens": [
+      { "text": "Bonjour", "start_ms": 600, "end_ms": 900, "confidence": 0.97, "is_final": true, "language": "fr" },
+      { "text": ", ", "start_ms": 900, "end_ms": 920, "confidence": 0.99, "is_final": true, "language": "fr" },
+      { "text": "je", "start_ms": 1000, "end_ms": 1100, "confidence": 0.62, "is_final": false, "language": "fr" }
+    ],
+    "final_audio_proc_ms": 920,
+    "total_audio_proc_ms": 1100
+  }
+}

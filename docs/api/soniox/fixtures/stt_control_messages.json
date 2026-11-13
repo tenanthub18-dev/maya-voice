@@ -1,0 +1,8 @@
+{
+  "_source": "finalize: https://soniox.com/docs/stt/rt/manual-finalization.mdx ; keepalive: https://soniox.com/docs/stt/rt/connection-keepalive.mdx",
+  "_status": "VERIFIED. Finalize completes with a final token {\"text\":\"<fin>\",\"is_final\":true}. Docs advise calling finalize ~200 ms after speech silence. Keepalive: send at least every 20 s during streaming when not sending audio (5-10 s typical); stream otherwise ends 408 request_timeout. Before the start request: at least every 40 s else WS close 1001. Idle time is billed.",
+  "finalize": { "type": "finalize" },
+  "keepalive": { "type": "keepalive" },
+  "fin_marker_token": { "text": "<fin>", "is_final": true },
+  "end_of_stream": "Send an EMPTY TEXT frame (not an empty binary frame). Server flushes then sends the finished message and closes."
+}

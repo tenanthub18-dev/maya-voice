@@ -1,0 +1,10 @@
+{
+  "_source": "https://developers.telnyx.com/docs/voice/programmable-voice/media-streaming.md",
+  "_provenance": "verbatim (bidirectional mode rtp): payload is base64 of audio in the configured bidirectional codec; chunks 20 ms to 30 s",
+  "body": {
+    "event": "media",
+    "media": {
+      "payload": "<base64 audio in bidirectionalCodec>"
+    }
+  }
+}

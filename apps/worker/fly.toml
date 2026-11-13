@@ -1,0 +1,27 @@
+app = "maya-voice-worker"
+# Every key and section below is documented in Fly.io's configuration reference:
+# https://fly.io/docs/reference/configuration/
+primary_region = "yyz"
+
+[env]
+  LATENCY_JSONL_PATH = "/tmp/latency.jsonl"
+
+[build]
+  dockerfile = "apps/worker/Dockerfile"
+
+[deploy]
+  strategy = "rolling"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "off"
+  auto_start_machines = true
+  min_machines_running = 2
+
+[[http_service.checks]]
+  grace_period = "10s"
+  interval = "15s"
+  method = "GET"
+  timeout = "2s"
+  path = "/healthz"

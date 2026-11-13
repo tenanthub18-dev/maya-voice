@@ -1,0 +1,11 @@
+{
+  "algorithm": "hmac-sha256",
+  "timestamp": "1700000000",
+  "method": "POST",
+  "path": "/webrtc/offer",
+  "body_utf8": "{\"sdp\":\"offer-sdp\",\"type\":\"offer\"}",
+  "body_sha256_hex": "429ba1798e2f4b79744e85b0889e97615f89943096ccc9926410a66762389065",
+  "canonical_utf8": "1700000000\nPOST\n/webrtc/offer\n429ba1798e2f4b79744e85b0889e97615f89943096ccc9926410a66762389065",
+  "secret_utf8": "fixture-only-secret",
+  "signature_hex": "a51aaa6f7496794e1d7e82967cdec21313fc41de5b616f47f601f1e03cfc2946"
+}

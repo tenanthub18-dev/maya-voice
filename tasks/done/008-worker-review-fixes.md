@@ -1,0 +1,10 @@
+# 008 Worker review fixes (apps/worker only)
+Fix these 7 defects found in review of apps/worker. Add a pytest test proving each. Do not touch other apps.
+1. `/telnyx/texml` (main.py): before returning Connect/Stream, call `load_runtime_config`. If it raises (any Exception), return TeXML that sends the caller to the human instead: `<Response><Dial>{transfer number}</Dial></Response>`, number from env `TRANSFER_PHONE_FALLBACK`; if unset, `<Response><Say>` short apology `</Say><Hangup/></Response>`. Cite Telnyx TeXML Dial/Say docs URL in a comment. Log the error (logging module, no secrets).
+2. `/ws`: catch `Exception` (not only ProviderConfigError) around config load, parse_telephony_websocket and run_pipeline; log with logger.exception; close with code 1011 and a generic reason (never leak exception text or env names to the peer).
+3. `/healthz`: make it `async def`, probe all configured endpoints concurrently with `httpx.AsyncClient`, per-probe timeout 0.8 s, overall budget under 1.5 s (Fly check timeout is 2 s). Keep response shape.
+4. Telnyx signature check must fail closed: if `TELNYX_PUBLIC_KEY` is unset return HTTP 503 (not accept). Tests that need to pass signatures set a generated Ed25519 key. Add `TELNYX_PUBLIC_KEY` to `.env.example` and scripts/check-env.ts required list if not already.
+5. `/ws` authentication: `/telnyx/texml` appends `?t=<timestamp>.<hexHMAC>` to the Stream url, HMAC-SHA256 of the timestamp with env `WS_AUTH_SECRET`; `/ws` verifies it (max age 120 s, constant-time compare) BEFORE `websocket.accept()`; on failure `await websocket.close(code=1008)`. Missing `WS_AUTH_SECRET` => texml uses the fallback branch from item 1. Add `WS_AUTH_SECRET` and `TRANSFER_PHONE_FALLBACK` to `.env.example` and check-env.
+6. `LatencyJsonlLogger.write` blocks the event loop: keep the sync `write` but have the observer handler call it via `asyncio.to_thread`.
+7. Declare `pyyaml` in apps/worker/pyproject.toml dependencies, run `uv lock`, delete the JSON fallback in `_load_yaml` (config.py). Add `apps/worker/.python-version` containing `3.12`.
+VERIFY: cd apps/worker && arch -arm64 uv run pytest -q && cd ../.. && arch -arm64 pnpm test

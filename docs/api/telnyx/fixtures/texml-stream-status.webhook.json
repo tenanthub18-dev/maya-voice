@@ -1,0 +1,16 @@
+{
+  "_source": "https://developers.telnyx.com/api-reference/callbacks/texml-stream.md",
+  "_provenance": "composed from OpenAPI webhook schema examples (form-encoded). NOTE: Stream verb page lists stream-failed, the callback schema lists stream-error",
+  "body": {
+    "content_type": "application/x-www-form-urlencoded",
+    "form": {
+      "AccountSid": "f5586561-8ff0-4291-a51b-c7dfe4139ff9",
+      "CallSid": "v3:9X2vxPDFY2RHSJ1EdMS0RHRksMTg7ldNxdjWbVr9zBjbGjGsSe-aiQ",
+      "CallSidLegacy": "v3:9X2vxPDFY2RHSJ1EdMS0RHRksMTg7ldNxdjWbVr9zBjbGjGsSe-aiQ",
+      "StreamEvent": "stream-started",
+      "StreamName": "my_stream",
+      "StreamSid": "stream-abc123",
+      "Timestamp": "2024-01-15T10:30:00Z"
+    }
+  }
+}

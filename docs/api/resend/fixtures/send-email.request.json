@@ -1,0 +1,10 @@
+{
+  "from": "Acme <onboarding@resend.dev>",
+  "to": ["delivered@resend.dev"],
+  "subject": "hello world",
+  "html": "<p>it works!</p>",
+  "text": "it works!",
+  "reply_to": "reply@example.com",
+  "headers": {"X-Entity-Ref-ID": "UNVERIFIED-example-header"},
+  "tags": [{"name": "category", "value": "order_confirmation"}]
+}

@@ -1,0 +1,21 @@
+{
+  "_source": "https://developers.telnyx.com/docs/messaging/messages/advanced-opt-in-out.md",
+  "_provenance": "verbatim partial payload from docs (only autoresponse_type, from, text, to shown; real payload also carries all fields in webhook-message-received)",
+  "body": {
+    "data": {
+      "event_type": "message.received",
+      "payload": {
+        "autoresponse_type": "STOP",
+        "from": {
+          "phone_number": "+15559876543"
+        },
+        "text": "STOP",
+        "to": [
+          {
+            "phone_number": "+15551234567"
+          }
+        ]
+      }
+    }
+  }
+}

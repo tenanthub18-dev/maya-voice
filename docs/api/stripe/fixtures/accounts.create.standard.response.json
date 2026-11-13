@@ -1,0 +1,8 @@
+{
+  "id": "acct_123",
+  "object": "account",
+  "type": "standard",
+  "charges_enabled": false,
+  "details_submitted": false,
+  "payouts_enabled": false
+}

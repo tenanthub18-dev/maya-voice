@@ -1,0 +1,409 @@
+{
+  "name": "BarBQ Tonite Restaurant",
+  "branch": "Dixie",
+  "browser_greeting": "BarBQ Tonite, hello.",
+  "address": "5165 Dixie Rd Unit 5, Mississauga, ON L4W 4G1, Canada",
+  "province": "ON",
+  "timezone": "America/Toronto",
+  "phone": "+19052829868",
+  "website": "https://barbqtonite.com/",
+  "maps_url": "https://maps.app.goo.gl/bPyNoxAekTQNqP3SA",
+  "latitude": 43.6400167,
+  "longitude": -79.6246218,
+  "cuisine": "Pakistani and Indian",
+  "opening_hours": [
+    {
+      "weekday": 0,
+      "open_time": "12:00",
+      "close_time": "22:30",
+      "source": "Google Maps listing, checked 2026-11-12"
+    },
+    {
+      "weekday": 1,
+      "open_time": "12:00",
+      "close_time": "22:30",
+      "source": "Google Maps listing, checked 2026-11-12"
+    },
+    {
+      "weekday": 2,
+      "open_time": "12:00",
+      "close_time": "22:30",
+      "source": "Google Maps listing, checked 2026-11-12"
+    },
+    {
+      "weekday": 3,
+      "open_time": "12:00",
+      "close_time": "22:30",
+      "source": "Google Maps listing, checked 2026-11-12"
+    },
+    {
+      "weekday": 4,
+      "open_time": "12:00",
+      "close_time": "22:30",
+      "source": "Google Maps listing, checked 2026-11-12"
+    },
+    {
+      "weekday": 5,
+      "open_time": "12:00",
+      "close_time": "22:30",
+      "source": "Google Maps listing, checked 2026-11-12"
+    },
+    {
+      "weekday": 6,
+      "open_time": "12:00",
+      "close_time": "22:30",
+      "source": "Google Maps listing, checked 2026-11-12"
+    }
+  ],
+  "menu": [
+    {
+      "name": "Reshmi Kabob",
+      "description": "Ground chicken marinated in ground coriander, white pepper, roasted cumin, and onions (2 pieces)",
+      "price_cents": 1499,
+      "category": "Sizzlers",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Bihari Kabob",
+      "description": "Strips of beef marinated in raw papaya, onions, ginger yogurt, and mustard oil",
+      "price_cents": 1899,
+      "category": "Sizzlers",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Bar BQ Tonite Platter",
+      "description": "Combination of 3 pieces of Seekh Kabab, 3 pieces of Reshmi Kabab, 4 pieces of Chapli Kabab, 4 pieces of Chicken Boti, 4 pieces of Lahori Fish, and 4 Naans",
+      "price_cents": 5499,
+      "category": "Sizzlers",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Lamb Haleem",
+      "description": "",
+      "price_cents": 1899,
+      "category": "Top Sellers",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Chicken Biryani",
+      "description": "Chicken marinated in yogurt, lemon juice, ground spices, garlic, ginger, mint, fried onions and steamed cooked in layers of basmati rice",
+      "price_cents": 1699,
+      "category": "Biryani",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Chicken 65",
+      "description": "Boneless pieces of checken cooked with curry leaves, chilli oil, ginger, and garlic",
+      "price_cents": 1899,
+      "category": "Curries",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Keema Naan Beef",
+      "description": "Butter naan stuffed with our famous kabobs.",
+      "price_cents": 899,
+      "category": "Naan",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Chicken Pakoora",
+      "description": "Deep fried pieces of boneless chicken marinated in house spices.",
+      "price_cents": 1599,
+      "category": "Starters",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Chicken Boti",
+      "description": "Boneless pieces of chicken breast marinated in lemon juice, ginger, garlic, ground spices, and roasted cumin (7 Pieces)",
+      "price_cents": 1699,
+      "category": "Sizzlers",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Lahori Fish",
+      "description": "Boneless pieces of fish marinated and deep-fried with lemon juice, yogurt, turmeric, chili peppers, garlic, and roasted coriander (7 Pieces)",
+      "price_cents": 1799,
+      "category": "Sizzlers",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Half Chargha",
+      "description": "Half Chicken marinated in special blend of fresh spices, steamed and golden fried",
+      "price_cents": 1499,
+      "category": "Sizzlers",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Full Chargha",
+      "description": "Whole Chicken marinated in special blend of fresh spices, steamed and golden fried",
+      "price_cents": 2899,
+      "category": "Sizzlers",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Chicken Tikka Leg",
+      "description": "Chicken Leg marinated in lemon juice, ginger, garlic, ground spices, and roasted cumin (1 Piece)",
+      "price_cents": 1299,
+      "category": "Sizzlers",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Chapli Kabob",
+      "description": "Mince beef mixed with chopped onions, tomatoes, coriander, and chili pepper (2 Pieces)",
+      "price_cents": 1499,
+      "category": "Sizzlers",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Chicken Tikka Boti Platter",
+      "description": "Combination of boneless chicken marinated in three types of marinades malai, achari, and haryali. (15 pcs)",
+      "price_cents": 4299,
+      "category": "Sizzlers",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Haryali Boti",
+      "description": "Boneless pieces chicken breast marinated in coriander, green chilis, and garlic. Served with naan and raita.(7 pcs)",
+      "price_cents": 1799,
+      "category": "Sizzlers",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Achari Boti",
+      "description": "Boneless pieces of chicken breast marinated in a tangy pickle sauce (7 pieces)",
+      "price_cents": 1799,
+      "category": "Sizzlers",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Malai Boti",
+      "description": "Boneless pieces of chicken breast marinated in a creamy sauce, green chilis, cumin, and ground spices (7pieces)",
+      "price_cents": 1799,
+      "category": "Sizzlers",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Seekh Kabob",
+      "description": "Ground beef marinated in fresh ground coriander, white pepper, roasted cumin, onions, broiled over open charcoal fire.",
+      "price_cents": 1499,
+      "category": "Sizzlers",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Vegetable Biryani",
+      "description": "Our famous Biryani but with a vegetarian twist.",
+      "price_cents": 1599,
+      "category": "Biryani",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Lamb Biryani",
+      "description": "Lamb marinated in yogurt, lemon juice, ground spices, garlic, ginger, mint, fried onions and steamed cooked in layers of basmati rice",
+      "price_cents": 2099,
+      "category": "Biryani",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Butter Chicken",
+      "description": "Tender pieces of boneless chicken marinated with garlic, fenugreek leaves, coriander, ground spices, cooked in a mild cream based sauce",
+      "price_cents": 1799,
+      "category": "Curries",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Chicken Tikka Masala",
+      "description": "Boneless chicken cooked with onions, green peppers, roasted cumin, garlic, and ginger in a tomato based sauce",
+      "price_cents": 1799,
+      "category": "Curries",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Chicken Katakat",
+      "description": "Boneless pieces of chicken cooked with ground spices, ginger, green chilies, and yogurt",
+      "price_cents": 1799,
+      "category": "Curries",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Channa Masala",
+      "description": "Chickpeas cooked in a pureed tomato sauce with traditional Lahori spices",
+      "price_cents": 1599,
+      "category": "Curries",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Karahi Chicken",
+      "description": "Chicken pieces cooked with tomatoes, green chillies, ginger, and blend of coarsely ground spices",
+      "price_cents": 1799,
+      "category": "Curries",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Karahi Lamb",
+      "description": "Lamb pieces cooked with tomatoes, green chillies, ginger, and blend of coarsely ground spices",
+      "price_cents": 1999,
+      "category": "Curries",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Prawn Masala",
+      "description": "Tiger shrimps cooked with tomatoes, chilies, coriander, lemon, and ground spices",
+      "price_cents": 1999,
+      "category": "Curries",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Sagh Paneer",
+      "description": "Pureed spinach and pieces of paneer cooked with mustard seeds, ginger, garlic, and ground spices",
+      "price_cents": 1799,
+      "category": "Curries",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Sagh Chicken",
+      "description": "Pureed spinach and pieces of chicken cooked with mustard seeds, ginger, garlic, and ground spices",
+      "price_cents": 1799,
+      "category": "Curries",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Sagh Lamb",
+      "description": "Pureed spinach and pieces of lamb cooked with mustard seeds, ginger, garlic, and ground spices",
+      "price_cents": 1999,
+      "category": "Curries",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Shahi Paneer",
+      "description": "Paneer cooked in an aromatic cream based tomato sauce",
+      "price_cents": 1799,
+      "category": "Curries",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Tarka Daal",
+      "description": "A mixture of yellow and black lentils cooked in ground spices, onions, ginger, and garlic",
+      "price_cents": 1599,
+      "category": "Curries",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Nihari",
+      "description": "Chunks of beef simmered with coarsely ground spices and aromatic herbs, garnished with fresh ginger, coriander and green chillies",
+      "price_cents": 1699,
+      "category": "Curries",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Malai Tikka Masala",
+      "description": "Creamy boneless pieces of Malai Tikka cooked with tomatoes, chilies, bell peppers and ground spices.",
+      "price_cents": 1999,
+      "category": "Curries",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "White Karahi",
+      "description": "A mild yet unique blend of yogurt, cream, black peppar, and garam masala.",
+      "price_cents": 1799,
+      "category": "Curries",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Alloo Gobi",
+      "description": "Cauliflower and potatoes cooked with cumin, ginger, and coriander",
+      "price_cents": 1799,
+      "category": "Curries",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Garlic Naan",
+      "description": "Soft buttery naan made with garlic, coriander, and mint.",
+      "price_cents": 400,
+      "category": "Naan",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Whole Wheat Roti",
+      "description": "House made special bread made with whole wheat flour.",
+      "price_cents": 400,
+      "category": "Naan",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Butter Naan",
+      "description": "Hot and fresh bread used to eat your favorite bar bq or curry with.",
+      "price_cents": 350,
+      "category": "Naan",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Double Ka Meeta",
+      "description": "Slices of fried bread cooked in a saffron syrup garnished with almonds.",
+      "price_cents": 600,
+      "category": "Desserts",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Ghulab Jamun",
+      "description": "Deep fried balls of dough cooked in a tasteful sugar syrup.",
+      "price_cents": 500,
+      "category": "Desserts",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Gajar Ka Halwa",
+      "description": "Finely dices pieces of carrot cooked with aromatic spices and khoya.",
+      "price_cents": 500,
+      "category": "Desserts",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    },
+    {
+      "name": "Soft Drinks",
+      "description": "",
+      "price_cents": 275,
+      "category": "Drinks",
+      "source_url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://maps.app.goo.gl/bPyNoxAekTQNqP3SA",
+      "fields": [
+        "name",
+        "branch",
+        "address",
+        "phone",
+        "coordinates",
+        "hours"
+      ],
+      "checked_at": "2026-11-12"
+    },
+    {
+      "url": "https://barbqtonite.com/",
+      "fields": [
+        "website",
+        "cuisine",
+        "two branches"
+      ],
+      "checked_at": "2026-11-12"
+    },
+    {
+      "url": "https://barbqtonite.square.site/?location=LVZ0HY3TRYP6V",
+      "fields": [
+        "Dixie pickup location",
+        "menu names",
+        "descriptions",
+        "CAD prices"
+      ],
+      "checked_at": "2026-11-12"
+    }
+  ],
+  "unverified": [
+    "Owner email and account",
+    "Allergen and halal certifications",
+    "Live stock and preparation time",
+    "Holiday hours",
+    "Reservation capacity and policy",
+    "Dine-in prices versus online pickup prices"
+  ]
+}

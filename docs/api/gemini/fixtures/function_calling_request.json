@@ -1,0 +1,27 @@
+{
+  "_source": "https://ai.google.dev/gemini-api/docs/generate-content/function-calling ; https://ai.google.dev/api/generate-content (FunctionCall/FunctionResponse fields)",
+  "_status": "tools[].functionDeclarations[{name,description,parameters{type,properties,required}}] VERIFIED from REST tabs. toolConfig.functionCallingConfig.mode (AUTO|ANY|VALIDATED|NONE) + allowedFunctionNames VERIFIED from SDK tabs; the REST wire spelling is UNVERIFIED (docs show no curl for it; proto3 camelCase assumed). Function declaration names/params below are OUR domain examples.",
+  "body": {
+    "systemInstruction": { "parts": [ { "text": "You are a restaurant receptionist. Use tools to book tables." } ] },
+    "contents": [ { "role": "user", "parts": [ { "text": "Table for 4 tomorrow at 7pm, name Singh" } ] } ],
+    "tools": [
+      { "functionDeclarations": [
+        {
+          "name": "create_reservation",
+          "description": "Create a table reservation",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "party_size": { "type": "integer", "description": "Number of guests" },
+              "datetime_iso": { "type": "string", "description": "Local ISO 8601 date-time" },
+              "guest_name": { "type": "string", "description": "Name for the booking" }
+            },
+            "required": ["party_size", "datetime_iso", "guest_name"]
+          }
+        }
+      ] }
+    ],
+    "toolConfig": { "functionCallingConfig": { "mode": "AUTO" } },
+    "generationConfig": { "maxOutputTokens": 300, "thinkingConfig": { "thinkingLevel": "minimal" } }
+  }
+}

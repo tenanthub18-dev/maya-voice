@@ -1,0 +1,14 @@
+{
+  "_source": "https://developers.telnyx.com/docs/development/api-fundamentals/api-errors.md",
+  "_provenance": "composed: code 10010 verbatim from catalog; mapping to 403 UNVERIFIED",
+  "body": {
+    "http_status": 403,
+    "errors": [
+      {
+        "code": "10010",
+        "title": "Authorization failed",
+        "detail": "You do not have permission to perform the requested action on the specified resource or resources."
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+# 018b Tighten database grants (found in Claude security review of 018)
+Add ONE new migration supabase/migrations/20261027130000_tighten_grants.sql (do not edit existing migrations) and PGlite tests in apps/web/tests/db/ proving each:
+1. organizations: authenticated owners may update ONLY name and spend_cap_cents. `revoke update on public.organizations from authenticated; grant update(name, spend_cap_cents) on public.organizations to authenticated;` Reason: owners could otherwise set `plan` or point `stripe_customer_id` at another customer (billing portal takeover). Test: owner update of plan / stripe_customer_id fails (42501), name/spend_cap_cents succeed.
+2. phone_numbers: authenticated gets SELECT only (drop owner write policy and insert/update/delete grants). Number buy/release/forwarding_verified_at are written only by server routes with the service role. Reason: an owner could register another business's number or forge forwarding_verified_at. Test both denied.
+3. sms_optouts: authenticated gets SELECT only (opt-outs are written by webhooks/worker with service role; owners must not delete opt-outs - CASL). Test insert/update/delete denied.
+4. bookings.source: create_booking() hardcodes 'owner' even for staff; add a `p_source text default 'owner'` allowing only 'owner','staff','phone','web' via check, set to 'staff' by the app when role is staff (update lib/data/supabase accordingly) .
+Also update the in-memory/Supabase DataSource contract tests if they touched these paths.
+VERIFY: cd /Users/sudhir/vibecoding && arch -arm64 pnpm --filter @voice-receptionist/web typecheck && arch -arm64 pnpm --filter @voice-receptionist/web test

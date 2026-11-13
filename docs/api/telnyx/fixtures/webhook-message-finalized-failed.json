@@ -1,0 +1,28 @@
+{
+  "_source": "https://developers.telnyx.com/docs/messaging/messages/receiving-webhooks.md",
+  "_provenance": "composed: finalized payload with errors[] using the documented error sample (code 40300 sample verbatim from the page); to[0].status 'delivery_failed' is a documented status value",
+  "body": {
+    "data": {
+      "event_type": "message.finalized",
+      "payload": {
+        "direction": "outbound",
+        "errors": [
+          {
+            "code": "40300",
+            "title": "Destination number unreachable",
+            "detail": "The destination number is not reachable on the carrier network.",
+            "source": {
+              "pointer": "/to/0/phone_number"
+            }
+          }
+        ],
+        "to": [
+          {
+            "phone_number": "+13125550002",
+            "status": "delivery_failed"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "multilingual-ai-voice-receptionist",
+  "private": true,
+  "packageManager": "pnpm@10.33.4",
+  "scripts": {
+    "check-env": "tsx scripts/check-env.ts",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "build": "turbo run build",
+    "prepare": "git rev-parse --git-dir >/dev/null 2>&1 || exit 0; test \"$(git config --get core.hooksPath)\" = .githooks || git config core.hooksPath .githooks"
+  },
+  "devDependencies": {
+    "tsx": "4.21.0",
+    "turbo": "2.6.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}

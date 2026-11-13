@@ -1,0 +1,14 @@
+{
+  "_source": "https://raw.githubusercontent.com/team-telnyx/openapi/master/openapi/spec3.json (POST /messages 409 response) ; https://developers.telnyx.com/api-reference/messages/send-a-message.md",
+  "_provenance": "composed: response descriptions verbatim (409 -> code 10036 'still being processed'); reusing a key with a different request returns 422; invalid header 400 code 10015",
+  "body": {
+    "http_status": 409,
+    "errors": [
+      {
+        "code": "10036",
+        "title": "Resource is being processed",
+        "detail": "This resource is in ongoing processing and it can't be interacted with. Please, wait for its operation to finish and retry later."
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "_source": "https://developers.telnyx.com/docs/voice/programmable-voice/texml-verbs/dial.md",
+  "_provenance": "verbatim from source (examples 1 and 2 combined into one; Number-noun form with statusCallback is verbatim)",
+  "body": {
+    "content_type": "text/xml",
+    "texml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Response>\n    <Dial action=\"/nextinstructions.php\" callerId=\"+13120001234\">\n      <Number statusCallback=\"https://foo.com/my_call_stats\" statusCallbackEvent=\"initiated ringing answered completed\">+19999999999</Number>\n    </Dial>\n</Response>"
+  }
+}

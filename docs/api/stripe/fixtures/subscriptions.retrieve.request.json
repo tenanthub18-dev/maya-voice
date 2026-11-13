@@ -1,0 +1,8 @@
+{
+  "_source": "https://docs.stripe.com/api/subscriptions/retrieve",
+  "_status": "VERIFIED",
+  "method": "GET",
+  "url": "https://api.stripe.com/v1/subscriptions/{{SUBSCRIPTION_ID}}",
+  "auth": "HTTP Basic secret key",
+  "note": "No idempotency key on GET (docs: no effect)."
+}

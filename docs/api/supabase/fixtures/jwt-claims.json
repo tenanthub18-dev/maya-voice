@@ -1,0 +1,17 @@
+{
+  "_source": "Claim names from https://supabase.com/docs/guides/auth/jwt-fields . Values are illustrative placeholders (UNVERIFIED as a real token).",
+  "iss": "https://<ref>.supabase.co/auth/v1",
+  "aud": "authenticated",
+  "exp": 1700003600,
+  "iat": 1700000000,
+  "sub": "<user uuid>",
+  "role": "authenticated",
+  "aal": "aal1",
+  "session_id": "<uuid>",
+  "email": "person@example.com",
+  "phone": "",
+  "is_anonymous": false,
+  "app_metadata": {},
+  "user_metadata": {},
+  "amr": [{ "method": "password", "timestamp": 1700000000 }]
+}

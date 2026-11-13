@@ -1,0 +1,8 @@
+{
+  "_source": "Key names confirmed (access_token, expires_in, refresh_token, token_type, user) via https://supabase.com/docs/reference/self-hosting-auth/introduction (endpoint list: 'Token responses include access_token, expires_in, refresh_token, token_type, and a user object'). All VALUES are UNVERIFIED placeholders; user object inner fields UNVERIFIED.",
+  "access_token": "<jwt>",
+  "token_type": "bearer",
+  "expires_in": 3600,
+  "refresh_token": "<opaque>",
+  "user": { "id": "<uuid>", "email": "person@example.com" }
+}

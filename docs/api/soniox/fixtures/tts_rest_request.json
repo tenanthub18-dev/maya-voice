@@ -1,0 +1,6 @@
+{
+  "_source": "https://soniox.com/docs/api-reference/tts/generate_tts.mdx",
+  "_status": "VERIFIED fields. POST {api_host}/tts (api_host https://api.soniox.com; full prefix /v1 is UNVERIFIED for this route -- other routes are /v1/models, /v1/tts-models, /v1/shared-voices). Header: Authorization: Bearer <SONIOX_API_KEY>. Response 200 = raw binary audio. Text max 5000 chars. Docs say model defaults to tts-rt-v1 -> ALWAYS pass model explicitly (tts-rt-v1 removed 2026-08-31).",
+  "body": { "model": "tts-rt-v2", "language": "ur", "voice": "Daniel", "audio_format": "pcm_s16le", "sample_rate": 16000, "text": "..." },
+  "errors": { "400": ["invalid_request", "model_not_available"], "401": "unauthenticated", "402": ["organization_balance_exhausted", "organization_monthly_budget_exhausted", "project_monthly_budget_exhausted"], "403": "temp_api_key_session_expired", "408": "request_timeout", "429": "limit_exceeded", "500": "internal_error", "503": "service_unavailable" }
+}

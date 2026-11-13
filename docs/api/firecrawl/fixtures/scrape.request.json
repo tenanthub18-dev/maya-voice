@@ -1,0 +1,9 @@
+{
+  "url": "https://example.com/menu",
+  "formats": [
+    {"type": "markdown"},
+    {"type": "json", "prompt": "Extract the restaurant details", "schema": {"type": "object", "properties": {"name": {"type": "string"}}, "required": ["name"]}}
+  ],
+  "onlyMainContent": true,
+  "parsers": [{"type": "pdf", "mode": "auto", "maxPages": 50}]
+}

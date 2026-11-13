@@ -1,0 +1,1 @@
+{"url": "https://example.com/menu.pdf", "formats": ["markdown"], "parsers": [{"type": "pdf", "mode": "auto", "maxPages": 20, "pages": false}]}

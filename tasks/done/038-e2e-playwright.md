@@ -1,0 +1,6 @@
+# 026 Playwright end-to-end (mock mode)
+Add @playwright/test (pinned) and apps/web/e2e/: runs the built app with INTEGRATIONS_MODE=mock on a free port via webServer config. Projects: mobile (375x812), tablet (768), desktop (1280). Flows: demo-owner login -> onboarding steps 1-7 (import via mock firecrawl, number buy via mock telnyx, checkout via mock stripe) -> publish agent -> test call (simulated) -> calls list -> call detail -> booking create (and double-booking rejected) -> order move -> settings spend cap -> French locale switch -> staff role forbidden actions. Assert no console errors, no horizontal scroll at 375, axe violations = 0. Script `pnpm --filter @voice-receptionist/web test:e2e`. Browsers installed via playwright install (VERIFY runs it).
+VERIFY: cd /Users/sudhir/vibecoding && arch -arm64 pnpm install && arch -arm64 pnpm --filter @voice-receptionist/web exec playwright install chromium && arch -arm64 pnpm --filter @voice-receptionist/web test:e2e
+
+
+NOTE (Claude): earlier attempts failed 3x with the cause lost. Write each failing run output to tmp/e2e-fail-<n>.log (never overwrite). If a failure is environmental (ports, browsers not installed, Next dev compile time), fix the harness (webServer config, timeouts, `playwright install` outside sandbox) rather than loosening assertions. Run against the final UI after 025b/031/032.

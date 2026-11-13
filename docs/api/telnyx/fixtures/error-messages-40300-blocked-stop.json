@@ -1,0 +1,13 @@
+{
+  "_source": "https://developers.telnyx.com/docs/messaging/messages/advanced-opt-in-out.md",
+  "_provenance": "verbatim from source (HTTP status not stated on page)",
+  "body": {
+    "errors": [
+      {
+        "code": "40300",
+        "title": "Blocked due to STOP message",
+        "detail": "Messages cannot be sent from '{from}' to '{to}' due to an existing block rule."
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "_source": "https://supabase.com/docs/guides/api/rest/postgrest-error-codes (shape: code, details, hint, message; the 42703 example is from the docs).",
+  "example_from_docs": {
+    "code": "42703",
+    "details": null,
+    "hint": "Perhaps you meant to reference the column some_table.fake_col",
+    "message": "column some_table.fake_col does not exist"
+  },
+  "postgres_codes": { "42501": "HTTP 403 if authenticated else 401 (insufficient privilege)", "23505": "HTTP 409 unique violation", "23503": "HTTP 409 foreign key violation" },
+  "pgrst": { "PGRST116": "406 singular requested, 0 or many rows", "PGRST200": "400 missing relationship", "PGRST202": "404 function not found", "PGRST204": "400 column not found", "PGRST205": "404 table not found", "PGRST301": "401 JWT invalid", "PGRST302": "401 no Bearer while anon disabled", "PGRST303": "401 JWT claims validation failed", "PGRST106": "406 schema not exposed" },
+  "rls_violation_message": "UNVERIFIED: 'new row violates row-level security policy for table \"x\"' with code 42501 is Postgres's standard text; not shown on the fetched docs page. SELECT blocked by RLS returns empty result, not an error (UNVERIFIED in docs; standard Postgres behavior)."
+}

@@ -1,0 +1,10 @@
+{
+  "_source": "https://ai.google.dev/gemini-api/docs/generate-content/text-generation (streamGenerateContent?alt=sse); https://ai.google.dev/api/generate-content",
+  "_status": "URL pattern VERIFIED. Each SSE event is 'data: <GenerateContentResponse JSON>' (standard behaviour of alt=sse; the docs fetch did not show an SSE sample => event framing UNVERIFIED from docs). Final chunk carries finishReason and usageMetadata.",
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:streamGenerateContent?alt=sse",
+  "request_body": "same as generate_request_basic.json body",
+  "example_chunks_UNVERIFIED": [
+    { "candidates": [ { "content": { "role": "model", "parts": [ { "text": "Bien " } ] }, "index": 0 } ] },
+    { "candidates": [ { "content": { "role": "model", "parts": [ { "text": "sûr !" } ] }, "finishReason": "STOP", "index": 0 } ], "usageMetadata": { "promptTokenCount": 120, "candidatesTokenCount": 4, "totalTokenCount": 124 } }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "_source": "https://docs.stripe.com/api/errors (attribute list)",
+  "_status": "Attribute set VERIFIED. The outer {\"error\": {...}} wrapper and the example values are UNVERIFIED (not shown on the fetched page; standard Stripe wire format).",
+  "example_invalid_request": {
+    "error": {
+      "type": "invalid_request_error",
+      "code": "resource_missing",
+      "message": "No such customer: 'cus_does_not_exist'",
+      "param": "customer",
+      "doc_url": "https://stripe.com/docs/error-codes/resource-missing",
+      "request_log_url": "<dashboard url>"
+    }
+  },
+  "example_card_error": {
+    "error": {
+      "type": "card_error",
+      "code": "card_declined",
+      "decline_code": "insufficient_funds",
+      "message": "Your card has insufficient funds.",
+      "charge": "ch_xxx",
+      "param": null,
+      "doc_url": "https://stripe.com/docs/error-codes/card-declined"
+    }
+  },
+  "example_idempotency_error": {
+    "error": {
+      "type": "idempotency_error",
+      "message": "Keys for idempotent requests can only be used with the same parameters they were first used with."
+    }
+  },
+  "attributes": [
+    "type",
+    "code",
+    "decline_code",
+    "message",
+    "param",
+    "doc_url",
+    "charge",
+    "payment_intent",
+    "payment_method",
+    "setup_intent",
+    "source",
+    "payment_method_type",
+    "request_log_url",
+    "advice_code",
+    "network_advice_code",
+    "network_decline_code"
+  ],
+  "types": [
+    "api_error",
+    "card_error",
+    "idempotency_error",
+    "invalid_request_error"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "_source": "https://docs.stripe.com/api/billing/meter-event/create",
+  "_status": "VERIFIED (verbatim)",
+  "object": "billing.meter_event",
+  "created": 1704824589,
+  "event_name": "ai_search_api",
+  "identifier": "identifier_123",
+  "livemode": true,
+  "payload": {
+    "value": "25",
+    "stripe_customer_id": "cus_NciAYcXfLnqBoz"
+  },
+  "timestamp": 1680210639
+}

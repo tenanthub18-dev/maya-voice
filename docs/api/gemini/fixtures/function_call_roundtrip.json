@@ -1,0 +1,15 @@
+{
+  "_source": "https://ai.google.dev/api/generate-content (Part, FunctionCall{id,name,args}, FunctionResponse{id,name,response,willContinue,scheduling}); https://ai.google.dev/gemini-api/docs/generate-content/function-calling (JS manual loop: model turn with functionCall, user turn with functionResponse, id must match; thoughtSignature must be returned inside its original Part)",
+  "_status": "Structure VERIFIED from reference + JS sample; the concrete JSON instance is OUR illustration = UNVERIFIED. Wire spelling of thoughtSignature in JSON assumed camelCase. 'response' must be a JSON object; use an 'error' key to report failures. Parallel calls: several functionCall parts in one model turn, matched by id.",
+  "model_turn_returned": {
+    "role": "model",
+    "parts": [
+      { "functionCall": { "id": "<call id>", "name": "create_reservation", "args": { "party_size": 4, "datetime_iso": "2026-10-28T19:00:00", "guest_name": "Singh" } }, "thoughtSignature": "<opaque; echo back unchanged in same part>" }
+    ]
+  },
+  "next_request_contents_append": [
+    "<the model_turn_returned object verbatim, role model>",
+    { "role": "user", "parts": [ { "functionResponse": { "id": "<same call id>", "name": "create_reservation", "response": { "result": { "confirmation": "R-1042", "status": "booked" } } } } ] }
+  ],
+  "finishReason_related": ["MALFORMED_FUNCTION_CALL", "UNEXPECTED_TOOL_CALL", "TOO_MANY_TOOL_CALLS", "MISSING_THOUGHT_SIGNATURE"]
+}

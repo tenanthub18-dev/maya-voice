@@ -1,0 +1,10 @@
+{
+  "_sources": ["https://supabase.com/docs/guides/storage/uploads/standard-uploads", "https://supabase.com/docs/reference/javascript/storage-from-createsignedurl"],
+  "upload_rest": "POST https://<ref>.supabase.co/storage/v1/object/<bucket>/<path>  headers: apikey, Authorization: Bearer <jwt>; optional x-upsert: true, Content-Type",
+  "upload_js": "supabase.storage.from('bucket_name').upload('file_path', file, { upsert: true, contentType: 'audio/wav' })",
+  "duplicate_path_error": "400 Asset Already Exists (unless upsert)",
+  "signed_url_js": "const { data, error } = await supabase.storage.from('avatars').createSignedUrl('folder/avatar1.png', 60)",
+  "upload_response_shape": "UNVERIFIED (docs page does not describe fields; supabase-js commonly returns data.path/id/fullPath)",
+  "signed_url_response_shape": "UNVERIFIED (docs do not state; data.signedUrl expected)",
+  "signed_url_rest": "UNVERIFIED (POST /storage/v1/object/sign/<bucket>/<path> {expiresIn} not on fetched pages)"
+}

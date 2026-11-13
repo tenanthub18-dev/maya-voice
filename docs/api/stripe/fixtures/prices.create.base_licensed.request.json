@@ -1,0 +1,14 @@
+{
+  "_source": "Composed from https://docs.stripe.com/api/checkout/sessions/create prerequisite (POST /v1/prices with recurring.interval + product_data.name)",
+  "_status": "UNVERIFIED composition (docs show the same shape with currency=usd, unit_amount=1000)",
+  "method": "POST",
+  "url": "https://api.stripe.com/v1/prices",
+  "auth": "HTTP Basic: secret key as username, empty password (curl -u \"$STRIPE_SECRET_KEY:\")",
+  "content_type": "application/x-www-form-urlencoded",
+  "form": {
+    "currency": "cad",
+    "unit_amount": "<cents>",
+    "recurring[interval]": "month",
+    "product_data[name]": "Base plan"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "subtotal_cents": 12345,
+  "jurisdictions": [
+    {"province": "AB", "rate_basis_points": 500, "tax_cents": 617, "note": "5% GST"},
+    {"province": "BC", "rate_basis_points": 500, "tax_cents": 617, "note": "5% GST; restaurant meals are exempt from BC PST"},
+    {"province": "MB", "rate_basis_points": 1200, "tax_cents": 1481, "note": "5% GST + 7% RST"},
+    {"province": "NB", "rate_basis_points": 1500, "tax_cents": 1852, "note": "15% HST"},
+    {"province": "NL", "rate_basis_points": 1500, "tax_cents": 1852, "note": "15% HST"},
+    {"province": "NS", "rate_basis_points": 1400, "tax_cents": 1728, "note": "14% HST"},
+    {"province": "NT", "rate_basis_points": 500, "tax_cents": 617, "note": "5% GST"},
+    {"province": "NU", "rate_basis_points": 500, "tax_cents": 617, "note": "5% GST"},
+    {"province": "ON", "rate_basis_points": 1300, "tax_cents": 1605, "note": "13% HST"},
+    {"province": "PE", "rate_basis_points": 1500, "tax_cents": 1852, "note": "15% HST"},
+    {"province": "QC", "rate_basis_points": 1497.5, "tax_cents": 1849, "note": "5% GST + 9.975% QST, rounded once on the order subtotal"},
+    {"province": "SK", "rate_basis_points": 1100, "tax_cents": 1358, "note": "5% GST + 6% PST"},
+    {"province": "YT", "rate_basis_points": 500, "tax_cents": 617, "note": "5% GST"}
+  ]
+}

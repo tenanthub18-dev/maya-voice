@@ -1,0 +1,43 @@
+{
+  "_source": "https://developers.telnyx.com/api-reference/phone-number-search/list-available-phone-numbers.md",
+  "_provenance": "verbatim schema examples (AvailablePhoneNumber + metadata) for a US 970 number; same shape expected for CA but no CA example is published",
+  "body": {
+    "data": [
+      {
+        "record_type": "available_phone_number",
+        "phone_number": "+19705555098",
+        "vanity_format": "",
+        "best_effort": false,
+        "quickship": true,
+        "reservable": true,
+        "region_information": [
+          {
+            "region_type": "country_code",
+            "region_name": "US"
+          }
+        ],
+        "cost_information": {
+          "upfront_cost": "3.21",
+          "monthly_cost": "6.54",
+          "currency": "USD"
+        },
+        "features": [
+          {
+            "name": "sms"
+          },
+          {
+            "name": "voice"
+          }
+        ]
+      }
+    ],
+    "meta": {
+      "total_results": 100,
+      "best_effort_results": 50
+    },
+    "metadata": {
+      "total_results": 100,
+      "best_effort_results": 50
+    }
+  }
+}

@@ -1,0 +1,41 @@
+node_modules/
+.next/
+.next-*/
+dist/
+coverage/
+.turbo/
+__pycache__/
+.pytest_cache/
+.venv/
+tmp/
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store
+.claude/worktrees/
+.pnpm-store/
+.claude/*.lock
+.claude/plan-state.json
+.vercel
+.env*.local
+
+# local voice test outputs
+scripts/dev/voice-test/clips/
+scripts/dev/voice-test/out/
+scripts/dev/voice-test/combined.wav
+
+# machine-local agent/deployment state and generated reports
+.codex/
+.claude/
+.superpowers/
+.vercel/
+*.tsbuildinfo
+test-results/
+playwright-report/
+supabase/.temp/
+supabase/.branches/
+
+# local session ledgers; comms/README.md remains publishable
+/comms/MASTER.md
+/comms/ANVI.md

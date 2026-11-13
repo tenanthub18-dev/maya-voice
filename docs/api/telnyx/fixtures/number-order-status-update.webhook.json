@@ -1,0 +1,50 @@
+{
+  "_source": "https://developers.telnyx.com/api-reference/callbacks/number-order-status-update.md",
+  "_provenance": "composed from OpenAPI webhook schema examples",
+  "body": {
+    "data": {
+      "event_type": "number_order.complete",
+      "id": "d578b093-a0e7-4b64-b0d3-6b689a6ff170",
+      "occurred_at": "2025-08-22T16:23:54.496464Z",
+      "payload": {
+        "id": "12ade33a-21c0-473b-b055-b3c836e1c292",
+        "record_type": "number_order",
+        "phone_numbers_count": 1,
+        "connection_id": "346789098765567",
+        "messaging_profile_id": "abc85f64-5717-4562-b3fc-2c9600",
+        "billing_group_id": "abc85f64-5717-4562-b3fc-2c9600",
+        "phone_numbers": [
+          {
+            "id": "dc8e4d67-33a0-4cbb-af74-7b58f05bd494",
+            "record_type": "number_order_phone_number",
+            "phone_number": "+19705555098",
+            "bundle_id": "bc8e4d67-33a0-4cbb-af74-7b58f05bd474",
+            "regulatory_requirements": [
+              {
+                "record_type": "phone_number_regulatory_requirement",
+                "requirement_id": "8ffb3622-7c6b-4ccc-b65f-7a3dc0099576",
+                "field_value": "45f45a04-b4be-4592-95b1-9306b9db2b21",
+                "field_type": "address"
+              }
+            ],
+            "requirements_met": true,
+            "status": "success"
+          }
+        ],
+        "sub_number_orders_ids": [
+          "string"
+        ],
+        "status": "pending",
+        "customer_reference": "MY REF 001",
+        "created_at": "2018-01-01T00:00:00.000000Z",
+        "updated_at": "2018-01-01T00:00:00.000000Z",
+        "requirements_met": true
+      },
+      "record_type": "event"
+    },
+    "meta": {
+      "attempt": 1,
+      "delivered_to": "https://sample-api.com/webhook"
+    }
+  }
+}

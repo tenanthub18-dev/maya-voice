@@ -1,0 +1,15 @@
+{
+  "_source": "https://ai.google.dev/gemini-api/docs/generate-content/text-generation (system_instruction object form, generationConfig.maxOutputTokens, thinkingConfig.thinkingLevel); https://ai.google.dev/api/generate-content (top-level field is systemInstruction in reference)",
+  "_status": "Endpoint POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent, header x-goog-api-key. Key names VERIFIED from docs samples (docs sample used gemini-3.8-flash; model id swapped to ours = UNVERIFIED combination). TEMPERATURE OMITTED ON PURPOSE: docs say temperature/top_p/top_k are deprecated and IGNORED for Gemini 3.5 Flash-Lite / 3.6 Flash and future gens will 400. Last content turn must be role 'user' (prefilled model turn => 400). Both system_instruction (REST sample) and systemInstruction (reference) appear in docs; proto3 JSON accepts either (UNVERIFIED) - use camelCase to match reference.",
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+  "body": {
+    "systemInstruction": { "parts": [ { "text": "You are the phone receptionist for <restaurant>. Reply in the caller's language in 1-2 short sentences." } ] },
+    "contents": [
+      { "role": "user", "parts": [ { "text": "Bonjour, je voudrais une table pour deux ce soir." } ] }
+    ],
+    "generationConfig": {
+      "maxOutputTokens": 300,
+      "thinkingConfig": { "thinkingLevel": "minimal" }
+    }
+  }
+}

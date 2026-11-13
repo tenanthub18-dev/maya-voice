@@ -1,0 +1,20 @@
+[
+  {"name":"zero","duration_seconds":0,"billable_seconds":0},
+  {"name":"one","duration_seconds":1,"billable_seconds":6},
+  {"name":"five","duration_seconds":5,"billable_seconds":6},
+  {"name":"six","duration_seconds":6,"billable_seconds":6},
+  {"name":"seven","duration_seconds":7,"billable_seconds":12},
+  {"name":"eleven","duration_seconds":11,"billable_seconds":12},
+  {"name":"twelve","duration_seconds":12,"billable_seconds":12},
+  {"name":"thirteen","duration_seconds":13,"billable_seconds":18},
+  {"name":"fifty-nine","duration_seconds":59,"billable_seconds":60},
+  {"name":"sixty","duration_seconds":60,"billable_seconds":60},
+  {"name":"sixty-one","duration_seconds":61,"billable_seconds":66},
+  {"name":"three-fifty-nine","duration_seconds":359,"billable_seconds":360},
+  {"name":"three-sixty","duration_seconds":360,"billable_seconds":360},
+  {"name":"three-sixty-one","duration_seconds":361,"billable_seconds":366},
+  {"name":"cached-above-duration","duration_seconds":7,"cached_billable_seconds":17,"billable_seconds":18},
+  {"name":"one-hour","duration_seconds":3600,"billable_seconds":3600},
+  {"name":"negative","duration_seconds":-1,"error":"non-negative"},
+  {"name":"missing-end","started_at":"2026-10-27T20:00:00Z","error":"requir"}
+]

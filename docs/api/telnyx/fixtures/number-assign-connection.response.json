@@ -1,0 +1,41 @@
+{
+  "_source": "https://developers.telnyx.com/api-reference/phone-number-configurations/update-a-phone-number.md",
+  "_provenance": "composed from OpenAPI schema property examples",
+  "body": {
+    "data": {
+      "id": "1293384261075731499",
+      "record_type": "phone_number",
+      "phone_number": "+19705555098",
+      "country_iso_alpha2": "US",
+      "status": "active",
+      "tags": [
+        "tag_1",
+        "tag_2"
+      ],
+      "external_pin": "1234",
+      "connection_id": "1293384261075731499",
+      "connection_name": "connection-name",
+      "customer_reference": "customer-reference",
+      "messaging_profile_id": "abc85f64-5717-4562-b3fc-2c9600000000",
+      "messaging_profile_name": "regional-customers",
+      "billing_group_id": "86f58db9-0fe3-4adc-9d1f-46e66e6e9323",
+      "emergency_enabled": true,
+      "emergency_address_id": "1315261609962112019",
+      "emergency_status": "active",
+      "call_forwarding_enabled": true,
+      "cnam_listing_enabled": true,
+      "caller_id_name_enabled": true,
+      "call_recording_enabled": true,
+      "t38_fax_gateway_enabled": true,
+      "phone_number_type": "local",
+      "inbound_call_screening": "disabled",
+      "purchased_at": "2019-10-23T18:10:00.000Z",
+      "created_at": "2019-10-23T18:10:00.000Z",
+      "updated_at": "2019-10-24T18:10:00.000Z",
+      "hd_voice_enabled": true,
+      "source_type": "number_order",
+      "deletion_lock_enabled": false,
+      "activated_at": "2019-10-23T18:10:00.000Z"
+    }
+  }
+}

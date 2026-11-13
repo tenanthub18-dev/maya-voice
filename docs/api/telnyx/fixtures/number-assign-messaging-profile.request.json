@@ -1,0 +1,16 @@
+{
+  "_source": "https://developers.telnyx.com/api-reference/phone-number-configurations/",
+  "_provenance": "request body verbatim from OpenAPI example of PATCH /phone_numbers/{id}/messaging (spec3.json). messaging_product value P2P is the spec's example; A2P also appears in responses.",
+  "body": {
+    "method": "PATCH",
+    "url": "https://api.telnyx.com/v2/phone_numbers/{id}/messaging",
+    "headers": {
+      "Authorization": "Bearer <TELNYX_API_KEY>",
+      "Accept": "application/json",
+      "Content-Type": "application/json"
+    },
+    "json": {
+      "messaging_profile_id": "dd50eba1-a0c0-4563-9925-b25e842a7cb6"
+    }
+  }
+}

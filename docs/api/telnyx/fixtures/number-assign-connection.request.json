@@ -1,0 +1,16 @@
+{
+  "_source": "https://developers.telnyx.com/api-reference/phone-number-configurations/update-a-phone-number.md",
+  "_provenance": "body field names verbatim (connection_id: 'Identifies the connection associated with the phone number'). That a TeXML application id is accepted as connection_id is UNVERIFIED: inferred, not shown verbatim in official docs (supported only indirectly: docs call the TeXML app id a 'connection ID' at https://developers.telnyx.com/api-reference/texml-rest-commands/create-a-connection-scoped-texml-call.md)",
+  "body": {
+    "method": "PATCH",
+    "url": "https://api.telnyx.com/v2/phone_numbers/{id}",
+    "headers": {
+      "Authorization": "Bearer <TELNYX_API_KEY>",
+      "Accept": "application/json",
+      "Content-Type": "application/json"
+    },
+    "json": {
+      "connection_id": "<TEXML_APPLICATION_ID>"
+    }
+  }
+}

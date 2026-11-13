@@ -1,0 +1,17 @@
+{
+  "_source": "https://soniox.com/docs/api-reference/stt/websocket-api.mdx ; https://soniox.com/docs/stt/rt/real-time-transcription.mdx ; https://soniox.com/docs/stt/rt/endpoint-detection.mdx",
+  "_status": "Field names/types VERIFIED from docs on 2026-10-27. This exact COMBINATION and the values chosen for Telnyx 8 kHz mulaw are UNVERIFIED (our inference; not shown as one example in docs). Send as first text frame after WS connect; API key goes in the Authorization header / WS subprotocol, NOT in api_key (deprecated, refused from 2027-01-15 if only key sent).",
+  "message": {
+    "model": "stt-rt-v5",
+    "audio_format": "mulaw",
+    "sample_rate": 8000,
+    "num_channels": 1,
+    "language_hints": ["en", "fr", "ur", "hi", "pa"],
+    "enable_language_identification": true,
+    "enable_endpoint_detection": true,
+    "max_endpoint_delay_ms": 1500,
+    "endpoint_sensitivity": 0.3,
+    "endpoint_latency_adjustment_level": 2,
+    "client_reference_id": "call-<uuid>"
+  }
+}

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Gitleaks protect command: https://github.com/gitleaks/gitleaks#protect
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo 'install gitleaks: brew install gitleaks'
+  exit 1
+fi
+
+exec gitleaks protect --staged --redact

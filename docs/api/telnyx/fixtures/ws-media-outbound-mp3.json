@@ -1,0 +1,10 @@
+{
+  "_source": "https://developers.telnyx.com/docs/voice/programmable-voice/media-streaming.md",
+  "_provenance": "verbatim (default bidirectional mode mp3): base64 mp3 file; max one media payload per second",
+  "body": {
+    "event": "media",
+    "media": {
+      "payload": "<base64 mp3 file>"
+    }
+  }
+}

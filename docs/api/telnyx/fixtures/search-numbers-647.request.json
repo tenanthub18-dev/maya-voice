@@ -1,0 +1,22 @@
+{
+  "_source": "https://developers.telnyx.com/api-reference/phone-number-search/list-available-phone-numbers.md",
+  "_provenance": "composed: field names/shapes verbatim from source; values chosen by us. NOT a captured real response; query param names verbatim from source. features array encoding is not specified by the page (OpenAPI says deepObject, explode=true -> repeated filter[features]=... keys; encoding UNVERIFIED).",
+  "body": {
+    "method": "GET",
+    "url": "https://api.telnyx.com/v2/available_phone_numbers",
+    "headers": {
+      "Authorization": "Bearer <TELNYX_API_KEY>",
+      "Accept": "application/json"
+    },
+    "query": {
+      "filter[country_code]": "CA",
+      "filter[national_destination_code]": "647",
+      "filter[phone_number_type]": "local",
+      "filter[features]": [
+        "sms",
+        "voice"
+      ],
+      "filter[limit]": 5
+    }
+  }
+}

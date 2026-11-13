@@ -1,0 +1,14 @@
+{
+  "_source": "https://developers.telnyx.com/docs/development/api-fundamentals/api-errors.md",
+  "_provenance": "composed: errors[] envelope per OpenAPI Errors/Error schema; code 10009 title/detail verbatim from catalog. HTTP-status-to-code mapping and exact live body UNVERIFIED (docs troubleshooting only says 401 = missing/invalid/revoked Bearer key)",
+  "body": {
+    "http_status": 401,
+    "errors": [
+      {
+        "code": "10009",
+        "title": "Authentication failed",
+        "detail": "The required authentication headers were either invalid or not included in the request."
+      }
+    ]
+  }
+}

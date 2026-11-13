@@ -1,0 +1,8 @@
+{
+  "_source": "https://developers.telnyx.com/docs/voice/programmable-voice/media-streaming.md",
+  "_provenance": "verbatim from Call Control media-streaming page; the TeXML Stream docs do not publish separate TeXML-specific frame examples, so identical framing for TeXML streams is UNVERIFIED",
+  "body": {
+    "event": "connected",
+    "version": "1.0.0"
+  }
+}

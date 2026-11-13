@@ -1,0 +1,17 @@
+{
+  "_source": "https://soniox.com/docs/api-reference/tts/websocket-api.mdx ; https://soniox.com/docs/tts/rt/real-time-generation.mdx",
+  "_status": "Field names VERIFIED from docs summary; the example objects below are our reconstruction (docs JSON examples not copied verbatim) => mark examples UNVERIFIED for exact key ordering/optional keys.",
+  "client_text_chunk": { "stream_id": "turn-0001", "text": "Bonjour, ", "text_end": false },
+  "client_text_final_chunk": { "stream_id": "turn-0001", "text": "comment puis-je vous aider ?", "text_end": true },
+  "client_cancel": { "stream_id": "turn-0001", "cancel": true },
+  "server_audio": { "stream_id": "turn-0001", "audio": "<base64 bytes>", "audio_end": false },
+  "server_audio_last": { "stream_id": "turn-0001", "audio": "<base64 bytes>", "audio_end": true },
+  "server_terminated": { "stream_id": "turn-0001", "terminated": true },
+  "server_audio_with_timestamps_extra": { "timestamps": { "characters": ["B"], "character_start_times_seconds": [0.0], "character_end_times_seconds": [0.05] } },
+  "limits": { "text_chunk_max_chars": 5000, "streams_per_connection": 5, "stream_max_generated_audio": "2 minutes", "concurrent_streams": 3, "requests_per_minute": 100, "stream_id_max_len": 256 },
+  "notes": [
+    "Treat stream complete ONLY after terminated:true.",
+    "A stream with no text for more than a few seconds without text_end:true is terminated.",
+    "Keepalive keeps the connection (not a stream) alive; Pipecat sends every 20 s per PRD verified facts. TTS keepalive JSON: see https://soniox.com/docs/tts/rt/connection-keepalive.mdx (NOT fetched; UNVERIFIED)."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "_source": "https://docs.stripe.com/testing",
+  "_status": "VERIFIED",
+  "expiry": "any future date (e.g. 12/34)",
+  "cvc": "any 3 digits (4 for Amex)",
+  "success": {
+    "visa": "4242424242424242",
+    "visa_debit": "4000056655665556",
+    "mastercard": "5555555555554444",
+    "visa_canada": "4000001240000000 (pm_card_ca / tok_ca)"
+  },
+  "declines": {
+    "generic": {
+      "number": "4000000000000002",
+      "code": "card_declined",
+      "decline_code": "generic_decline"
+    },
+    "insufficient_funds": {
+      "number": "4000000000009995",
+      "code": "card_declined",
+      "decline_code": "insufficient_funds"
+    },
+    "expired": {
+      "number": "4000000000000069",
+      "code": "expired_card"
+    },
+    "incorrect_cvc": {
+      "number": "4000000000000127",
+      "code": "incorrect_cvc"
+    }
+  },
+  "three_ds": {
+    "required_ok": "4000002500003155 (auth unless set up) / 4000002760003184 (always) / 4000008400000027 (US 3DS required)",
+    "required_declined": "4000008400001629"
+  },
+  "invalid_data": {
+    "incorrect_number": "4242424242424241"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "_source": "https://docs.stripe.com/api/billing/meter/create",
+  "_status": "VERIFIED",
+  "method": "POST",
+  "url": "https://api.stripe.com/v1/billing/meters",
+  "auth": "HTTP Basic: secret key as username, empty password (curl -u \"$STRIPE_SECRET_KEY:\")",
+  "content_type": "application/x-www-form-urlencoded",
+  "form": {
+    "display_name": "Search API Calls",
+    "event_name": "ai_search_api",
+    "default_aggregation[formula]": "sum",
+    "value_settings[event_payload_key]": "value",
+    "customer_mapping[type]": "by_id",
+    "customer_mapping[event_payload_key]": "stripe_customer_id"
+  }
+}

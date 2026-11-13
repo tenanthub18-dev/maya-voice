@@ -1,0 +1,14 @@
+{
+  "_source": "https://developers.telnyx.com/docs/development/api-fundamentals/reliability/rate-limiting.md",
+  "_provenance": "verbatim from source",
+  "body": {
+    "http_status": 429,
+    "errors": [
+      {
+        "code": "10011",
+        "title": "Too many requests",
+        "detail": "You have exceeded the maximum number of allowed requests."
+      }
+    ]
+  }
+}

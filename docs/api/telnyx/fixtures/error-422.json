@@ -1,0 +1,17 @@
+{
+  "_source": "https://developers.telnyx.com/docs/development/api-fundamentals/api-errors.md",
+  "_provenance": "composed: code 10027 verbatim from catalog; the 422 shape includes source.pointer/parameter per troubleshooting page, values ours",
+  "body": {
+    "http_status": 422,
+    "errors": [
+      {
+        "code": "10027",
+        "title": "Unprocessable Entity",
+        "detail": "The server understood the syntax of the request but was unable to process the instructions.",
+        "source": {
+          "pointer": "/phone_numbers/0/phone_number"
+        }
+      }
+    ]
+  }
+}

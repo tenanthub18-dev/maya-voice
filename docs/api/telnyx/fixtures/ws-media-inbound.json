@@ -1,0 +1,15 @@
+{
+  "_source": "https://developers.telnyx.com/docs/voice/programmable-voice/media-streaming.md",
+  "_provenance": "verbatim from Call Control media-streaming page; the TeXML Stream docs do not publish separate TeXML-specific frame examples, so identical framing for TeXML streams is UNVERIFIED; payload truncated by us (original is a longer base64 RTP payload, no headers)",
+  "body": {
+    "event": "media",
+    "sequence_number": "4",
+    "media": {
+      "track": "inbound/outbound",
+      "chunk": "2",
+      "timestamp": "5",
+      "payload": "no+JhoaJjpzSHxAKBgYJDhtEopGKh4aIjZm7JhILBwYIDRg1qZSLh4aIjJevLBUMBwYHDBUsr5eMiIaHi5SpNRgNCAYHCxImu5mNiIaHipGiRBsOCQYGChAf0pyOiYaGiY+e/x4PCQYGCQ4cUp+Q"
+    },
+    "stream_id": "32DE0DEA-53CB-4B21-89A4-9E1819C043BC"
+  }
+}

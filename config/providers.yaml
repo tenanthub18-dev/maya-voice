@@ -1,0 +1,132 @@
+# Confirmed model/provider identifiers:
+# https://soniox.com/docs/stt/models
+# https://soniox.com/docs/tts/models
+# https://soniox.com/docs/tts/concepts/voices
+# https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-lite
+stt:
+  provider: soniox
+  model: stt-rt-v5
+llm:
+  provider: google
+  model: gemini-3.1-flash-lite
+  max_output_tokens: 512
+# In-call model (OpenAI). `llm` above stays Gemini for post-call summaries.
+# Measured 2026-11-03 through the real pipeline (docs/DECISIONS.md): gpt-4.1-mini median reply 1.18 s vs 1.53 s for
+# gpt-5.6-terra (reasoning off). gpt-4.1 models take no reasoning_effort. Terra is the quality upgrade if needed.
+# https://platform.openai.com/docs/models
+voice_llm:
+  provider: openai
+  model: gpt-4.1-mini
+  max_output_tokens: 512
+voice_llm_fallback:
+  provider: openai
+  model: gpt-4.1
+# Live-tested 2026-10-29 (see docs/DECISIONS.md): 3.5-flash-lite took 16-22 s per reply, 2.5-flash-lite returns 404.
+# https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash
+llm_fallback:
+  provider: google
+  model: gemini-3.6-flash
+tts:
+  provider: soniox
+  model: tts-rt-v2
+  voice: Priya
+# Explicit operator warm only; no REST generation on the call audio path.
+# https://docs.soniox.com/tts/rest-api/generate-speech
+greeting:
+  endpoint: https://tts-rt.soniox.com/tts
+  cache_dir: /tmp/voice-receptionist-browser-greetings
+  sample_rate: 16000
+  max_age_seconds: 2592000
+# VERIFY-gated: leave unset until a fallback provider/model/voice is validated.
+tts_fallback:
+telephony:
+  provider: telnyx
+resilience:
+  launch_languages: [en, fr-CA, ur, hi, pa, te, ar]
+  llm_first_token_timeout_seconds: 2.5
+  tool_timeout_seconds: 3.0
+  silence_check_seconds: 8
+  silence_end_seconds: 16
+  wrap_up_seconds: 540
+  hard_end_seconds: 600
+  noise:
+    false_barge_in_limit: 3
+    window_seconds: 30
+    base_vad_threshold: 0.5
+    raised_vad_threshold: 0.72
+  offline_queue:
+    path: /tmp/voice-receptionist-offline-messages.json
+    maximum_messages: 100
+  cached_phrases:
+    apology:
+      en: "Sorry, something went wrong."
+      fr-CA: "Désolé, un problème est survenu."
+      ur: "معاف کیجیے، ایک مسئلہ پیش آ گیا ہے۔"
+      hi: "माफ़ कीजिए, कुछ गड़बड़ हो गई है।"
+      pa: "ਮਾਫ਼ ਕਰਨਾ, ਕੋਈ ਸਮੱਸਿਆ ਆ ਗਈ ਹੈ।"
+      te: "క్షమించండి, ఏదో సమస్య వచ్చింది."
+      ar: "عذراً، حدثت مشكلة."
+    filler:
+      en: "One moment, please."
+      fr-CA: "Un instant, s'il vous plaît."
+      ur: "ایک لمحہ، براہ کرم۔"
+      hi: "कृपया एक क्षण।"
+      pa: "ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਪਲ।"
+      te: "దయచేసి ఒక్క క్షణం."
+      ar: "لحظة من فضلك."
+    transfer:
+      en: "I'll transfer you to the restaurant."
+      fr-CA: "Je vais vous transférer au restaurant."
+      ur: "میں آپ کی کال ریسٹورنٹ کو منتقل کرتا ہوں۔"
+      hi: "मैं आपकी कॉल रेस्टोरेंट में ट्रांसफ़र कर रहा हूँ।"
+      pa: "ਮੈਂ ਤੁਹਾਡੀ ਕਾਲ ਰੈਸਟੋਰੈਂਟ ਨੂੰ ਟ੍ਰਾਂਸਫਰ ਕਰ ਰਿਹਾ ਹਾਂ।"
+      te: "నేను మీ కాల్‌ను రెస్టారెంట్‌కు బదిలీ చేస్తున్నాను."
+      ar: "سأحوّل مكالمتك إلى المطعم."
+    trouble_hearing:
+      en: "Sorry, I'm having trouble hearing you."
+      fr-CA: "Désolé, j'ai du mal à vous entendre."
+      ur: "معاف کیجیے، مجھے آپ کی آواز سننے میں دشواری ہو رہی ہے۔"
+      hi: "माफ़ कीजिए, मुझे आपकी आवाज़ सुनने में दिक्कत हो रही है।"
+      pa: "ਮਾਫ਼ ਕਰਨਾ, ਮੈਨੂੰ ਤੁਹਾਡੀ ਆਵਾਜ਼ ਸੁਣਨ ਵਿੱਚ ਮੁਸ਼ਕਲ ਆ ਰਹੀ ਹੈ।"
+      te: "క్షమించండి, మీ మాట నాకు సరిగ్గా వినిపించడం లేదు."
+      ar: "عذراً، لا أسمعك بوضوح."
+    goodbye:
+      en: "Thank you for calling. Goodbye."
+      fr-CA: "Merci de votre appel. Au revoir."
+      ur: "کال کرنے کا شکریہ۔ خدا حافظ۔"
+      hi: "कॉल करने के लिए धन्यवाद। नमस्ते।"
+      pa: "ਕਾਲ ਕਰਨ ਲਈ ਧੰਨਵਾਦ। ਅਲਵਿਦਾ।"
+      te: "కాల్ చేసినందుకు ధన్యవాదాలు. నమస్కారం."
+      ar: "شكراً لاتصالك. مع السلامة."
+
+# Public USD estimates verified 2026-11-12; never an invoice or customer charge.
+pricing:
+  currency: USD
+  rate_as_of: '2026-11-12'
+  llm:
+    # Prompt counts include cached input. Explicit snapshots only:
+    # https://developers.openai.com/api/docs/models/gpt-4.1-mini
+    gpt-4.1-mini:
+      aliases: [gpt-4.1-mini-2025-04-14]
+      input_per_million: 0.40
+      cached_input_per_million: 0.10
+      output_per_million: 1.60
+    # https://developers.openai.com/api/docs/models/gpt-4.1
+    gpt-4.1:
+      aliases: [gpt-4.1-2025-04-14]
+      input_per_million: 2.00
+      cached_input_per_million: 0.50
+      output_per_million: 8.00
+  # https://soniox.com/pricing (Pipecat reports seconds/characters, not billed tokens)
+  stt:
+    stt-rt-v5:
+      audio_tokens_per_hour_estimate: 30000
+      audio_input_per_million: 2.00
+      text_input_per_million: 4.00
+      text_output_per_million: 4.00
+  tts:
+    tts-rt-v2:
+      text_tokens_per_character_estimate: 0.3
+      audio_tokens_per_hour_estimate: 30000
+      text_input_per_million: 4.00
+      audio_output_per_million: 21.50

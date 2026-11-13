@@ -1,0 +1,3 @@
+# M1.3 Fly.io + Docker config (PRD §10 runbook step 2)
+Create apps/worker/Dockerfile (python:3.12-slim, uv, non-root), apps/worker/fly.toml with primary_region = "yyz", min_machines_running = 2, auto_stop_machines = "off", health check GET /healthz, rolling deploy strategy; verify each fly.toml key name against https://fly.io/docs/reference/configuration/ and cite it. Add docs/RUNBOOK.md section 'Deploy worker' with the exact human steps (fly launch --no-deploy, fly secrets set ... names only, fly deploy). Do not deploy.
+VERIFY: cd apps/worker && uv run python -c "import tomllib;d=tomllib.load(open('fly.toml','rb'));assert d['primary_region']=='yyz'" && test -f Dockerfile

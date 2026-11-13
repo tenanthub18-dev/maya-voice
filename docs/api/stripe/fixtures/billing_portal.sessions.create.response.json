@@ -1,0 +1,15 @@
+{
+  "_source": "https://docs.stripe.com/api/customer_portal/sessions/create",
+  "_status": "VERIFIED (verbatim)",
+  "id": "bps_1MrSjzLkdIwHu7ixex0IvU9b",
+  "object": "billing_portal.session",
+  "configuration": "bpc_1MAhNDLkdIwHu7ixckACO1Jq",
+  "created": 1680210639,
+  "customer": "cus_NciAYcXfLnqBoz",
+  "flow": null,
+  "livemode": false,
+  "locale": null,
+  "on_behalf_of": null,
+  "return_url": "https://example.com/account",
+  "url": "https://billing.stripe.com/p/session?secret=<redacted>"
+}

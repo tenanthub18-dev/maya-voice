@@ -1,0 +1,6 @@
+{
+  "_source": "Generated locally from the canonical 44-byte PCM WAV header; Soniox documents raw binary response but publishes no response bytes: https://soniox.com/docs/api-reference/tts/generate_tts.mdx",
+  "_status": "GENERATED MOCK ONLY, NOT PROVIDER-CAPTURED. Valid 8 kHz mono PCM WAV with an empty data chunk; replace with a captured response during live verification.",
+  "content_type": "audio/wav",
+  "base64": "UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YQAAAAA="
+}

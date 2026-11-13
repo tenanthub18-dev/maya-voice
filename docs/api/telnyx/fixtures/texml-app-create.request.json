@@ -1,0 +1,28 @@
+{
+  "_source": "https://raw.githubusercontent.com/team-telnyx/openapi/master/openapi/spec3.json (POST /texml_applications); listed at https://developers.telnyx.com/api-reference/texml-applications/creates-a-texml-application.md",
+  "_provenance": "verbatim OpenAPI example (trimmed to voice-relevant fields)",
+  "body": {
+    "method": "POST",
+    "url": "https://api.telnyx.com/v2/texml_applications",
+    "headers": {
+      "Authorization": "Bearer <TELNYX_API_KEY>",
+      "Accept": "application/json",
+      "Content-Type": "application/json"
+    },
+    "json": {
+      "friendly_name": "call-router",
+      "active": false,
+      "voice_url": "https://example.com",
+      "voice_fallback_url": "https://fallback.example.com",
+      "voice_method": "get",
+      "status_callback": "https://example.com",
+      "status_callback_method": "get",
+      "inbound": {
+        "channel_limit": 10,
+        "shaken_stir_enabled": true,
+        "sip_subdomain": "example",
+        "sip_subdomain_receive_settings": "only_my_connections"
+      }
+    }
+  }
+}

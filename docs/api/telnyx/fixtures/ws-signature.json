@@ -1,0 +1,12 @@
+{
+  "_source": "https://developers.telnyx.com/docs/voice/programmable-voice/media-streaming.md",
+  "_provenance": "documented scheme restated as data",
+  "body": {
+    "request_headers": [
+      "telnyx-signature-ed25519",
+      "telnyx-timestamp"
+    ],
+    "signed_string": "{telnyx-timestamp}|{stream_url}",
+    "note": "stream_url is the exact URL set when starting the stream, including query string. Whether this applies identically to TeXML <Stream url=...> is UNVERIFIED (TeXML streams page links to the same section)."
+  }
+}

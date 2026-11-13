@@ -1,0 +1,5 @@
+{
+  "_source": "https://soniox.com/docs/api-reference/stt/websocket-api.mdx",
+  "_status": "VERIFIED shape (numbers illustrative).",
+  "message": { "tokens": [], "final_audio_proc_ms": 1560, "total_audio_proc_ms": 1680, "finished": true }
+}

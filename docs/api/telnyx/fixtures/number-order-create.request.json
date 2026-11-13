@@ -1,0 +1,24 @@
+{
+  "_source": "https://developers.telnyx.com/api-reference/phone-number-orders/create-a-number-order.md",
+  "_provenance": "verbatim from source (OpenAPI example, https://raw.githubusercontent.com/team-telnyx/openapi/master/openapi/spec3.json CreateNumberOrderRequest). Second phone_number entry is a German number with requirement_group_id in the original example; trimmed to the first.",
+  "body": {
+    "method": "POST",
+    "url": "https://api.telnyx.com/v2/number_orders",
+    "headers": {
+      "Authorization": "Bearer <TELNYX_API_KEY>",
+      "Accept": "application/json",
+      "Content-Type": "application/json"
+    },
+    "json": {
+      "phone_numbers": [
+        {
+          "phone_number": "+19705555098"
+        }
+      ],
+      "connection_id": "346789098765567",
+      "messaging_profile_id": "abc85f64-5717-4562-b3fc-2c9600",
+      "billing_group_id": "abc85f64-5717-4562-b3fc-2c9600",
+      "customer_reference": "MY REF 001"
+    }
+  }
+}

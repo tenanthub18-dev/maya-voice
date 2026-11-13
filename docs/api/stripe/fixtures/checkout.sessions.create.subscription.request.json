@@ -1,0 +1,26 @@
+{
+  "_source": "Params individually verified at https://docs.stripe.com/api/checkout/sessions/create ; composition is ours",
+  "_status": "PARTLY UNVERIFIED: (a) omitting quantity on the metered line item is only documented for legacy metered prices; (b) {CHECKOUT_SESSION_ID} template not seen in fetched pages; (c) customer_update[address]=auto required with automatic_tax+existing customer is UNVERIFIED",
+  "method": "POST",
+  "url": "https://api.stripe.com/v1/checkout/sessions",
+  "auth": "HTTP Basic: secret key as username, empty password (curl -u \"$STRIPE_SECRET_KEY:\")",
+  "content_type": "application/x-www-form-urlencoded",
+  "form": {
+    "mode": "subscription",
+    "customer": "{{CUSTOMER_ID}}",
+    "line_items[0][price]": "{{BASE_PRICE_ID}}",
+    "line_items[0][quantity]": "1",
+    "line_items[1][price]": "{{METERED_PRICE_ID}}",
+    "success_url": "https://example.com/billing/success?session_id={CHECKOUT_SESSION_ID}",
+    "cancel_url": "https://example.com/billing/cancel",
+    "client_reference_id": "{{RESTAURANT_ID}}",
+    "metadata[restaurant_id]": "{{RESTAURANT_ID}}",
+    "subscription_data[metadata][restaurant_id]": "{{RESTAURANT_ID}}",
+    "automatic_tax[enabled]": "true",
+    "customer_update[address]": "auto",
+    "billing_address_collection": "required"
+  },
+  "headers": {
+    "Idempotency-Key": "<uuid-v4>"
+  }
+}

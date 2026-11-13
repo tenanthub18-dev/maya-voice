@@ -1,0 +1,8 @@
+{
+  "_source": "https://developers.telnyx.com/docs/voice/programmable-voice/texml-verbs/stream.md",
+  "_provenance": "verbatim from source (first example, async mode)",
+  "body": {
+    "content_type": "text/xml",
+    "texml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Response>\n  <Start>\n    <Stream url=\"wss://yourdomain.com/stream\" track=\"both_tracks\" />\n  </Start>\n</Response>"
+  }
+}

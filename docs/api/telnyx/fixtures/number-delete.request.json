@@ -1,0 +1,12 @@
+{
+  "_source": "https://developers.telnyx.com/api-reference/phone-number-configurations/delete-a-phone-number.md",
+  "_provenance": "composed: field names/shapes verbatim from source; values chosen by us. NOT a captured real response",
+  "body": {
+    "method": "DELETE",
+    "url": "https://api.telnyx.com/v2/phone_numbers/{id}",
+    "headers": {
+      "Authorization": "Bearer <TELNYX_API_KEY>",
+      "Accept": "application/json"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "_source": "https://docs.stripe.com/api/billing/meter/create",
+  "_status": "VERIFIED (verbatim)",
+  "id": "mtr_test_61Q8nQMqIFK9fRQmr41CMAXJrFdZ5MnA",
+  "object": "billing.meter",
+  "created": 1704824589,
+  "customer_mapping": {
+    "type": "by_id",
+    "event_payload_key": "stripe_customer_id"
+  },
+  "default_aggregation": {
+    "formula": "sum"
+  },
+  "display_name": "Search API Calls",
+  "event_name": "ai_search_api",
+  "event_time_window": null,
+  "livemode": false,
+  "status": "active",
+  "status_transitions": {
+    "deactivated_at": null
+  },
+  "updated": 1704824589,
+  "value_settings": {
+    "event_payload_key": "value"
+  }
+}

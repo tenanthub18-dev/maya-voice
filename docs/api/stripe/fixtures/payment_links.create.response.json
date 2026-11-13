@@ -1,0 +1,17 @@
+{
+  "id": "plink_123",
+  "object": "payment_link",
+  "active": true,
+  "currency": "cad",
+  "metadata": {
+    "restaurant_id": "rest_123",
+    "order_id": "order_123"
+  },
+  "restrictions": {
+    "completed_sessions": {
+      "count": 0,
+      "limit": 1
+    }
+  },
+  "url": "https://buy.stripe.com/test_example"
+}

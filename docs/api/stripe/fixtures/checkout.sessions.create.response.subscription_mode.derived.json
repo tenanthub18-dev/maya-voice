@@ -1,0 +1,80 @@
+{
+  "_source": "Derived from the docs payment-mode example by changing fields named in the Checkout Session object docs (mode, customer, metadata, client_reference_id, urls, currency)",
+  "_status": "UNVERIFIED / illustrative. Key fields to rely on: id, url, status, mode, customer, subscription (null until complete)",
+  "id": "cs_test_a11YYufWQzNY63zpQ6QSNRQhkUpVph4WRmzW0zWJO2znZKdVujZ0N0S22u",
+  "object": "checkout.session",
+  "after_expiration": null,
+  "allow_promotion_codes": null,
+  "amount_subtotal": 4900,
+  "amount_total": 4900,
+  "automatic_tax": {
+    "enabled": false,
+    "liability": null,
+    "status": null
+  },
+  "billing_address_collection": null,
+  "cancel_url": "https://example.com/billing/cancel",
+  "client_reference_id": "rest_123",
+  "consent": null,
+  "consent_collection": null,
+  "created": 1679600215,
+  "currency": "cad",
+  "custom_fields": [],
+  "custom_text": {
+    "shipping_address": null,
+    "submit": null
+  },
+  "customer": "cus_NffrFeUfNV2Hib",
+  "customer_creation": "if_required",
+  "customer_details": null,
+  "customer_email": null,
+  "expires_at": 1679686615,
+  "invoice": null,
+  "invoice_creation": {
+    "enabled": false,
+    "invoice_data": {
+      "account_tax_ids": null,
+      "custom_fields": null,
+      "description": null,
+      "footer": null,
+      "issuer": null,
+      "metadata": {},
+      "rendering_options": null
+    }
+  },
+  "livemode": false,
+  "locale": null,
+  "metadata": {
+    "restaurant_id": "rest_123"
+  },
+  "mode": "subscription",
+  "payment_intent": null,
+  "payment_link": null,
+  "payment_method_collection": "always",
+  "payment_method_options": {},
+  "payment_method_types": [
+    "card"
+  ],
+  "payment_status": "unpaid",
+  "phone_number_collection": {
+    "enabled": false
+  },
+  "recovered_from": null,
+  "setup_intent": null,
+  "shipping_address_collection": null,
+  "shipping_cost": null,
+  "shipping_details": null,
+  "shipping_options": [],
+  "status": "open",
+  "submit_type": null,
+  "subscription": null,
+  "success_url": "https://example.com/billing/success?session_id={CHECKOUT_SESSION_ID}",
+  "total_details": {
+    "amount_discount": 0,
+    "amount_shipping": 0,
+    "amount_tax": 0
+  },
+  "return_url": null,
+  "ui_mode": "hosted_page",
+  "url": "https://checkout.stripe.com/c/pay/cs_test_a11YYufWQzNY63zpQ6QSNRQhkUpVph4WRmzW0zWJO2znZKdVujZ0N0S22u#<fragment-truncated>"
+}

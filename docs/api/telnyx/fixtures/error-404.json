@@ -1,0 +1,14 @@
+{
+  "_source": "https://developers.telnyx.com/docs/development/api-fundamentals/api-errors.md",
+  "_provenance": "composed: code 10005 verbatim from catalog; mapping to 404 UNVERIFIED",
+  "body": {
+    "http_status": 404,
+    "errors": [
+      {
+        "code": "10005",
+        "title": "Resource not found",
+        "detail": "The requested resource or URL could not be found."
+      }
+    ]
+  }
+}

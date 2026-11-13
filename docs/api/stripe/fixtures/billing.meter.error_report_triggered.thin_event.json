@@ -1,0 +1,37 @@
+{
+  "_source": "https://docs.stripe.com/billing/subscriptions/usage-based/recording-usage-api",
+  "_status": "VERIFIED (verbatim). THIN event, object=v2.core.event; needs a separate thin event destination",
+  "id": "evt_test_65R2GpwDsnmpzihMjdT16R2GDhI4SQdXJGRbvn7JA8mPEm",
+  "object": "v2.core.event",
+  "created": "2024-08-28T20:54:12.051Z",
+  "data": {
+    "developer_message_summary": "There is 1 invalid event",
+    "reason": {
+      "error_count": 1,
+      "error_types": [
+        {
+          "code": "meter_event_no_customer_defined",
+          "error_count": 1,
+          "sample_errors": [
+            {
+              "error_message": "Customer mapping key stripe_customer_id not found in payload.",
+              "request": {
+                "id": "",
+                "idempotency_key": "37c741d8-1f7e-4adc-af16-afdca1d73b37"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "validation_end": "2024-08-28T20:54:10.000Z",
+    "validation_start": "2024-08-28T20:54:00.000Z"
+  },
+  "reason": null,
+  "related_object": {
+    "id": "mtr_test_61R2GlpFXJ4R3L5DN41Fb82guyGVEUmO",
+    "type": "billing.meter",
+    "url": "/v1/billing/meters/mtr_test_61R2GlpFXJ4R3L5DN41Fb82guyGVEUmO"
+  },
+  "type": "v1.billing.meter.error_report_triggered"
+}

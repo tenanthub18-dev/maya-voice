@@ -1,0 +1,98 @@
+{
+  "_source": "Envelope fields from https://docs.stripe.com/api/events/object ; data.object bodies from the Subscription/Invoice/Checkout Session object examples in the docs",
+  "_status": "UNVERIFIED / COMPOSED: Stripe publishes no per-event full payload. Envelope is verbatim shape; values illustrative. Capture real payloads with `stripe listen` / `stripe trigger` in M-billing.",
+  "id": "evt_1CHECKOUTcomposed",
+  "object": "event",
+  "api_version": "<your account/destination API version>",
+  "created": 1686089970,
+  "data": {
+    "object": {
+      "id": "cs_test_a11YYufWQzNY63zpQ6QSNRQhkUpVph4WRmzW0zWJO2znZKdVujZ0N0S22u",
+      "object": "checkout.session",
+      "after_expiration": null,
+      "allow_promotion_codes": null,
+      "amount_subtotal": 4900,
+      "amount_total": 4900,
+      "automatic_tax": {
+        "enabled": false,
+        "liability": null,
+        "status": null
+      },
+      "billing_address_collection": null,
+      "cancel_url": "https://example.com/billing/cancel",
+      "client_reference_id": "rest_123",
+      "consent": null,
+      "consent_collection": null,
+      "created": 1679600215,
+      "currency": "cad",
+      "custom_fields": [],
+      "custom_text": {
+        "shipping_address": null,
+        "submit": null
+      },
+      "customer": "cus_NffrFeUfNV2Hib",
+      "customer_creation": "if_required",
+      "customer_details": {
+        "email": "jennyrosen@example.com",
+        "name": "Jenny Rosen"
+      },
+      "customer_email": null,
+      "expires_at": 1679686615,
+      "invoice": "in_1MtHbELkdIwHu7ixl4OzzPMv",
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": null,
+          "custom_fields": null,
+          "description": null,
+          "footer": null,
+          "issuer": null,
+          "metadata": {},
+          "rendering_options": null
+        }
+      },
+      "livemode": false,
+      "locale": null,
+      "metadata": {
+        "restaurant_id": "rest_123"
+      },
+      "mode": "subscription",
+      "payment_intent": null,
+      "payment_link": null,
+      "payment_method_collection": "always",
+      "payment_method_options": {},
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "paid",
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [],
+      "status": "complete",
+      "submit_type": null,
+      "subscription": "sub_1MowQVLkdIwHu7ixeRlqHVzs",
+      "success_url": "https://example.com/billing/success?session_id={CHECKOUT_SESSION_ID}",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "return_url": null,
+      "ui_mode": "hosted_page",
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.completed"
+}

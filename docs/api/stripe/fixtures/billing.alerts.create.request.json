@@ -1,0 +1,17 @@
+{
+  "_source": "https://docs.stripe.com/billing/subscriptions/usage-based/alerts",
+  "_status": "VERIFIED",
+  "method": "POST",
+  "url": "https://api.stripe.com/v1/billing/alerts",
+  "auth": "HTTP Basic: secret key as username, empty password (curl -u \"$STRIPE_SECRET_KEY:\")",
+  "content_type": "application/x-www-form-urlencoded",
+  "form": {
+    "title": "Sample alert",
+    "alert_type": "usage_threshold",
+    "usage_threshold[filters][0][type]": "customer",
+    "usage_threshold[filters][0][customer]": "{{CUSTOMER_ID}}",
+    "usage_threshold[meter]": "{{METER_ID}}",
+    "usage_threshold[gte]": "100",
+    "usage_threshold[recurrence]": "one_time"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_source": "https://developers.telnyx.com/docs/messaging/messages/send-message.md",
+  "_provenance": "verbatim from source (curl body in guide, step 4). Optional: messaging_profile_id, webhook_url, webhook_failover_url, use_profile_webhooks, media_urls, type per OpenAPI.",
+  "body": {
+    "method": "POST",
+    "url": "https://api.telnyx.com/v2/messages",
+    "headers": {
+      "Authorization": "Bearer <TELNYX_API_KEY>",
+      "Accept": "application/json",
+      "Content-Type": "application/json",
+      "Idempotency-Key": "<uuid-v4, optional>"
+    },
+    "json": {
+      "from": "+15551234567",
+      "to": "+15559876543",
+      "text": "Hello, world!"
+    }
+  }
+}

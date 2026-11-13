@@ -1,0 +1,8 @@
+{
+  "_source": "https://developers.telnyx.com/docs/voice/programmable-voice/texml-verbs/stream.md and https://developers.telnyx.com/docs/voice/programmable-voice/texml-verbs/connect.md",
+  "_provenance": "UNVERIFIED: inferred, not shown verbatim in official docs as an exact document: docs show <Start><Stream> examples and state <Stream> is a child of <Connect> (synchronous); no verbatim <Connect><Stream> document is published. Attribute names/values are from the Stream attribute table. Parameter child verbs verbatim from Stream examples.",
+  "body": {
+    "content_type": "text/xml",
+    "texml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Response>\n  <Connect>\n    <Stream url=\"wss://example.com/stream\" track=\"inbound_track\" bidirectionalMode=\"rtp\" bidirectionalCodec=\"PCMU\" bidirectionalSamplingRate=\"8000\" enableReconnect=\"false\">\n      <Parameter name=\"customer_id\" value=\"12345\" />\n    </Stream>\n  </Connect>\n</Response>"
+  }
+}

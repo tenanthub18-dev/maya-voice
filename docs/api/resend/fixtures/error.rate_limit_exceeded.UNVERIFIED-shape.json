@@ -1,0 +1,1 @@
+{ "_note": "UNVERIFIED shape: docs list name+status but the fetched page did not show the JSON body. Resend SDK/community commonly shows statusCode/name/message.", "statusCode": 429, "name": "rate_limit_exceeded", "message": "Too many requests. Please limit the number of requests per second." }

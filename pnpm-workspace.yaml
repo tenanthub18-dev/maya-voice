@@ -1,0 +1,9 @@
+confirmModulesPurge: false
+
+# Vite 8 and Rolldown require Node >=20.19. pnpm provisions this runtime for
+# installs and scripts: https://pnpm.io/settings#usenodeversion
+useNodeVersion: 20.20.2
+
+packages:
+  - "apps/*"
+  - "packages/*"

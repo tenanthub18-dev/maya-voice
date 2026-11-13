@@ -1,0 +1,20 @@
+{
+  "_source": "Field names: https://ai.google.dev/api/generate-content (GenerateContentResponse, UsageMetadata, Candidate, FinishReason)",
+  "_status": "Field NAMES VERIFIED; the whole JSON instance (values, ordering) is our illustration = UNVERIFIED as a real capture. Capture a real response at M0 and replace.",
+  "body": {
+    "candidates": [
+      { "content": { "role": "model", "parts": [ { "text": "Bien sûr ! Pour quelle heure ?" } ] }, "finishReason": "STOP", "index": 0 }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 120,
+      "candidatesTokenCount": 9,
+      "thoughtsTokenCount": 0,
+      "totalTokenCount": 129,
+      "promptTokensDetails": [ { "modality": "TEXT", "tokenCount": 120 } ]
+    },
+    "modelVersion": "gemini-3.5-flash-lite",
+    "responseId": "<string>"
+  },
+  "other_documented_usageMetadata_fields": ["cachedContentTokenCount", "toolUsePromptTokenCount", "cacheTokensDetails", "candidatesTokensDetails", "toolUsePromptTokensDetails", "serviceTier"],
+  "billing_note": "Output price covers output + thinking tokens; maxOutputTokens also counts thinking tokens (low cap can truncate). https://ai.google.dev/gemini-api/docs/thinking"
+}

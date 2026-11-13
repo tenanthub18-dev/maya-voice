@@ -1,0 +1,38 @@
+{
+  "_source": "https://telnyx.com/pricing.md (linked from https://developers.telnyx.com/pricing.md); fetched 2026-10-27; VERIFY before relying",
+  "_provenance": "VERIFY: rows copied from telnyx.com/pricing.md sections global-numbers, inbound-voice, sms-api, mms-api, short-code, toll-free-numbers. Not from developers.telnyx.com. USD. SIP-trunk/TeXML OUTBOUND per-minute Canada rate NOT found.",
+  "body": {
+    "currency": "USD",
+    "local_number": {
+      "monthly_recurring": 0.35,
+      "one_time": 1.0,
+      "source_row": "Canadian Local number Monthly Recurring Cost / One Time Cost"
+    },
+    "toll_free_number": {
+      "monthly_recurring": 1.0,
+      "one_time": 1.0
+    },
+    "inbound_voice_per_min": {
+      "local_from_landline": 0.004,
+      "local_from_mobile": 0.004,
+      "toll_free": 0.015,
+      "direct_inward_dial": 0.0035
+    },
+    "voice_api_platform_fee_per_min": 0.002,
+    "media_streaming_per_min": 0.0035,
+    "sms_long_code_per_part": {
+      "inbound": 0.0025,
+      "outbound": 0.0025,
+      "note": "plus carrier fees (see source); outbound row in messaging-outbound table: $0.004 per operator, so which applies is UNVERIFIED"
+    },
+    "mms_per_part": {
+      "inbound": 0.005,
+      "outbound": 0.015
+    },
+    "sms_short_code_per_part": {
+      "inbound": 0.007,
+      "outbound": 0.0255
+    },
+    "messaging_outbound_canada_per_operator": 0.004
+  }
+}

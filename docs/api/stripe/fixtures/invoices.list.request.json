@@ -1,0 +1,7 @@
+{
+  "_source": "https://docs.stripe.com/api/invoices/list",
+  "_status": "VERIFIED (params: customer, subscription, status, limit 1-100 default 10, starting_after, ending_before, created, collection_method)",
+  "method": "GET",
+  "url": "https://api.stripe.com/v1/invoices?customer={{CUSTOMER_ID}}&limit=10",
+  "auth": "HTTP Basic secret key"
+}

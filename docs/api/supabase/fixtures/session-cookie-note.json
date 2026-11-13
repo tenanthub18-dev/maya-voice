@@ -1,0 +1,1 @@
+{ "_source": "https://supabase.com/docs/guides/auth/server-side/nextjs", "default_cookie_name": "sb-<project_ref>-auth-token", "refresh_token_reuse_interval_default_seconds": 10, "refresh_source": "https://supabase.com/docs/guides/auth/sessions" }

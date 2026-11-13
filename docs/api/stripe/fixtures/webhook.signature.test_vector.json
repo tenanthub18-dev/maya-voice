@@ -1,0 +1,12 @@
+{
+  "_status": "GENERATED LOCALLY with Python hmac-sha256 per the documented algorithm; NOT a Stripe-issued vector. Use to unit-test our verifier.",
+  "_algorithm_source": "https://docs.stripe.com/webhooks (Verify manually)",
+  "secret": "whsec_TEST_ONLY_not_a_real_secret",
+  "timestamp": 1492774577,
+  "raw_body": "{\"id\":\"evt_test\",\"object\":\"event\",\"type\":\"ping\"}",
+  "signed_payload": "1492774577.{\"id\":\"evt_test\",\"object\":\"event\",\"type\":\"ping\"}",
+  "expected_v1": "743bab87a957ba6acd21170661d04d1dcfd97470bf8c5acb5d8e81d42119a93c",
+  "stripe_signature_header": "t=1492774577,v1=743bab87a957ba6acd21170661d04d1dcfd97470bf8c5acb5d8e81d42119a93c",
+  "tolerance_seconds_default_in_libraries": 300,
+  "docs_sample_header": "t=1492774577,v1=5257a869e7ecebeda32affa62cdca3fa51cad7e77a0e56ff536d0ce8e108d8bd,v0=6ffbb59b2300aae63f272406069a9788598b792a944a07aba816edb039989a39"
+}

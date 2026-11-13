@@ -1,0 +1,12 @@
+{
+  "_source": "Paths + body param names: https://supabase.com/docs/reference/self-hosting-auth/introduction (endpoint list, as summarized by fetch). Base URL https://<ref>.supabase.co/auth/v1 and the apikey header are UNVERIFIED for GoTrue (apikey header rule: https://supabase.com/docs/guides/api/api-keys).",
+  "signup":        { "method": "POST", "path": "/signup", "body_params": ["email", "password", "phone", "data"] },
+  "password":      { "method": "POST", "path": "/token?grant_type=password", "body_params": ["email", "password", "phone"] },
+  "refresh":       { "method": "POST", "path": "/token?grant_type=refresh_token", "body_params": ["refresh_token"] },
+  "otp_magic":     { "method": "POST", "path": "/otp", "body_params": ["email", "phone", "create_user", "data"] },
+  "verify":        { "method": "POST", "path": "/verify", "body_params": ["email", "phone", "redirect_to", "token", "type"] },
+  "logout":        { "method": "POST", "path": "/logout", "response": "204 (no body); Authorization: Bearer <access_token> UNVERIFIED" },
+  "get_user":      { "method": "GET", "path": "/user", "requires": "authentication" },
+  "oauth_callback":{ "method": "GET", "path": "/callback", "response": "302 redirect from external provider" },
+  "settings":      { "method": "GET", "path": "/settings" }
+}

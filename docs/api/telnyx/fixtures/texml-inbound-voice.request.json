@@ -1,0 +1,21 @@
+{
+  "_source": "https://developers.telnyx.com/docs/voice/programmable-voice/texml-instruction-fetching.md",
+  "_provenance": "field names + example values verbatim from the 'Request Parameters' table; encoding per page: GET=query params, POST=form-encoded body. CallStatus is shown in the page's GET example only.",
+  "body": {
+    "method": "POST",
+    "content_type": "application/x-www-form-urlencoded",
+    "form": {
+      "AccountSid": "6a9a7976-012e-45d2-9258-6f5dc68d861e",
+      "CallSid": "fcc47bc6-e428-11ed-ad79-02420aef00b4",
+      "CallSidLegacy": "fcc47bc6-e428-11ed-ad79-02420aef00b4",
+      "CallerId": "+13122010091",
+      "CallingPartyType": "pstn",
+      "From": "+13122010091",
+      "FromSipUri": "+13122010091@10.239.182.10",
+      "To": "+13122010090",
+      "ToSipUri": "+13122010090@sip.telnyx.com",
+      "ConnectionId": "1568109700606592442",
+      "CallStatus": "in-progress"
+    }
+  }
+}

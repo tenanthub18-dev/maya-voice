@@ -1,0 +1,15 @@
+{
+  "_source": "https://docs.stripe.com/api/customers/create",
+  "_status": "VERIFIED",
+  "method": "POST",
+  "url": "https://api.stripe.com/v1/customers",
+  "auth": "HTTP Basic: secret key as username, empty password (curl -u \"$STRIPE_SECRET_KEY:\")",
+  "content_type": "application/x-www-form-urlencoded",
+  "form": {
+    "name": "Jenny Rosen",
+    "email": "jennyrosen@example.com"
+  },
+  "headers": {
+    "Idempotency-Key": "<uuid-v4>  (UNVERIFIED value; header documented at idempotent_requests)"
+  }
+}

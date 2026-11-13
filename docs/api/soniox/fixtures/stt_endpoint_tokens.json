@@ -1,0 +1,14 @@
+{
+  "_source": "https://soniox.com/docs/stt/rt/endpoint-detection.mdx",
+  "_status": "VERIFIED that '<end>' is a final token emitted once at the end of each finalized segment; surrounding tokens illustrative.",
+  "message": {
+    "tokens": [
+      { "text": "Table", "is_final": true, "language": "en" },
+      { "text": " for", "is_final": true, "language": "en" },
+      { "text": " two", "is_final": true, "language": "en" },
+      { "text": "<end>", "is_final": true }
+    ],
+    "final_audio_proc_ms": 2400,
+    "total_audio_proc_ms": 2400
+  }
+}

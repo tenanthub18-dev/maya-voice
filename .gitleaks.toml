@@ -1,0 +1,24 @@
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Generated dependencies, build output, and local test artifacts"
+paths = [
+  '''(^|/)\.git/''',
+  '''(^|/)node_modules/''',
+  '''(^|/)\.venv/''',
+  '''(^|/)\.next/''',
+  '''(^|/)\.turbo/''',
+  '''(^|/)\.pytest_cache/''',
+  '''(^|/)__pycache__/''',
+  '''(^|/)test-results/''',
+  '''(^|/)docs/api/stripe/fixtures/''',
+]
+regexes = [
+  '''SONIOX_API_KEY''',
+  '''GEMINI_API_KEY''',
+  '''FIRECRAWL_API_KEY''',
+  '''INTEGRATIONS_MODE=live''',
+  '''\{\{STRIPE_SECRET_KEY\}\}''',
+  '''\$STRIPE_SECRET_KEY:''',
+]

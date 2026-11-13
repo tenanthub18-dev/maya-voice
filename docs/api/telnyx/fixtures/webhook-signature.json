@@ -1,0 +1,17 @@
+{
+  "_source": "https://developers.telnyx.com/docs/messaging/messages/receiving-webhooks.md and https://developers.telnyx.com/docs/development/api-fundamentals/webhooks/receiving-webhooks.md",
+  "_provenance": "documented scheme restated as data; header names and signed-string format verbatim from docs",
+  "body": {
+    "headers": [
+      "telnyx-signature-ed25519",
+      "telnyx-timestamp"
+    ],
+    "signature_encoding": "base64 (Ed25519 signature)",
+    "public_key_source": "Mission Control Portal https://portal.telnyx.com/#/app/api-keys (base64; Go/PHP/.NET docs examples base64-decode it to raw 32-byte key)",
+    "signed_string": "{telnyx-timestamp}|{raw request body}",
+    "timestamp_format": "Unix timestamp (seconds)",
+    "replay_window": "docs: reject if telnyx-timestamp older than 5 minutes",
+    "raw_body_required": true,
+    "on_failure_docs_example_returns": 403
+  }
+}

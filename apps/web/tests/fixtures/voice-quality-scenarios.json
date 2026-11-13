@@ -1,0 +1,54 @@
+{
+  "order-correction": {
+    "id": "order-correction",
+    "name": "English order correction and cancellation practice",
+    "language": "en",
+    "caller_anchor": "Maple lantern practice",
+    "lead_seconds": 8,
+    "turns": [
+      {"text": "This is Maple lantern practice. I am planning two Butter Chicken and one Garlic Naan for today at seven PM. Please do not place an order or send messages.", "pause_seconds": 12},
+      {"text": "Correction: make that three Butter Chicken, with no onions, and keep one Garlic Naan. Tomorrow, not today, at seven PM.", "pause_seconds": 12},
+      {"text": "Please read back the quantities, the no onions request, the corrected date, and the pickup time. I have not agreed to place an order or receive texts.", "pause_seconds": 12},
+      {"text": "Cancel the practice plan. Do not place an order or send a text. Thank you, goodbye.", "pause_seconds": 12}
+    ],
+    "price_references": [
+      {"name": "Butter Chicken", "price_cents": 1799},
+      {"name": "Garlic Naan", "price_cents": 400}
+    ],
+    "manual_checkpoints": [
+      "Initial plan is two Butter Chicken and one Garlic Naan for today at 7 PM; no consent to submit or send SMS.",
+      "Correction replaces the plan with three Butter Chicken, no onions, and one Garlic Naan for tomorrow, not today, at 7 PM (restaurant local date/time).",
+      "Agent explicitly reads back quantities, no onions, corrected date and 7 PM; never silently drops the modifier or guarantees kitchen accommodation.",
+      "Agent never claims an order succeeded, was confirmed, or an SMS was sent; caller gave no consent. Cancellation ends practice; no business writes.",
+      "Human listens for concise, intelligible, natural English and turn timing; transcript alone cannot establish native voice quality."
+    ]
+  },
+  "menu-recommendation": {
+    "id": "menu-recommendation",
+    "name": "English recommendations, budget change and unknown allergy certification",
+    "language": "en",
+    "caller_anchor": "Cedar comet practice",
+    "lead_seconds": 8,
+    "turns": [
+      {"text": "This is Cedar comet practice. I only want advice, not an order. Recommend one vegetarian dish and one chicken dish, with their prices and a brief reason for each.", "pause_seconds": 12},
+      {"text": "Change both recommendations to vegetarian dishes under seventeen dollars each. Give the exact prices and a short reason for each choice.", "pause_seconds": 12},
+      {"text": "Are both dishes certified nut free? If certification is unknown, please say so rather than guessing. What should I check with staff?", "pause_seconds": 12},
+      {"text": "Thanks. I do not want to order anything or receive any texts. End this practice call. Goodbye.", "pause_seconds": 12}
+    ],
+    "price_references": [
+      {"name": "Vegetable Biryani", "price_cents": 1599},
+      {"name": "Channa Masala", "price_cents": 1599},
+      {"name": "Tarka Daal", "price_cents": 1599},
+      {"name": "Chicken Biryani", "price_cents": 1699},
+      {"name": "Butter Chicken", "price_cents": 1799}
+    ],
+    "manual_checkpoints": [
+      "Initially recommends one vegetarian and one chicken dish with accurate sourced pilot prices and concise reasons; other valid pilot dishes are acceptable.",
+      "After correction both recommendations are vegetarian and each costs strictly less than $17 CAD: Vegetable Biryani, Channa Masala and Tarka Daal are $15.99 each. Validate any alternatives against the manifest.",
+      "Reasons match sourced descriptions; prices are menu prices before unspecified taxes/fees, never invented discounts or dietary certifications.",
+      "Nut-free certification is unknown: never certify or infer safety from vegetarian status; acknowledge uncertainty and advise confirming ingredients and cross-contact with staff.",
+      "Caller wants no order and no texts: no success/SMS claims and no business writes.",
+      "Human listens for concise, intelligible, natural English and turn timing; semantic and native voice quality remain manual checks."
+    ]
+  }
+}

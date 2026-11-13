@@ -1,0 +1,1 @@
+{"urls": ["https://example.com/*"], "prompt": "Extract menu, hours, contact, FAQs", "schema": {"type": "object", "properties": {"title": {"type": "string"}}, "required": ["title"]}}

@@ -1,0 +1,12 @@
+{
+  "_source": "https://soniox.com/docs/api-reference/tts/websocket-api.mdx",
+  "_status": "Fields VERIFIED; values illustrative. Per-stream error: server sends error then terminated:true for that stream_id; connection stays open for other streams.",
+  "message": {
+    "stream_id": "turn-0001",
+    "error_code": 400,
+    "error_type": "invalid_request",
+    "error_message": "<human readable>",
+    "more_info": "https://soniox.com/docs/api-reference/errors",
+    "request_id": "<uuid>"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_note": "OUR DESIGN, not from Firecrawl docs. Usable as formats[].schema in /v2/scrape or schema in /v2/extract.",
+  "type": "object",
+  "properties": {
+    "restaurant_name": {"type": "string"},
+    "address": {"type": "object", "properties": {"street": {"type": "string"}, "city": {"type": "string"}, "province": {"type": "string"}, "postal_code": {"type": "string"}}},
+    "phone": {"type": "string"},
+    "opening_hours": {"type": "array", "items": {"type": "object", "properties": {"day": {"type": "string"}, "open": {"type": "string"}, "close": {"type": "string"}, "closed": {"type": "boolean"}}, "required": ["day"]}},
+    "menu_items": {"type": "array", "items": {"type": "object", "properties": {"name": {"type": "string"}, "description": {"type": "string"}, "price": {"type": "number"}, "category": {"type": "string"}}, "required": ["name"]}},
+    "faqs": {"type": "array", "items": {"type": "object", "properties": {"question": {"type": "string"}, "answer": {"type": "string"}}, "required": ["question", "answer"]}}
+  },
+  "required": ["restaurant_name"]
+}

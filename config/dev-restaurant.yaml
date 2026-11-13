@@ -1,0 +1,20 @@
+name: Maple Table Test Kitchen
+hours:
+  monday: 11:00-21:00
+  tuesday: 11:00-21:00
+  wednesday: 11:00-21:00
+  thursday: 11:00-22:00
+  friday: 11:00-23:00
+  saturday: 10:00-23:00
+  sunday: 10:00-20:00
+menu:
+  - name: Classic Poutine
+    price: "12.99"
+  - name: Maple Salmon
+    price: "24.50"
+  - name: Butter Chicken
+    price: "18.75"
+  - name: Margherita Pizza
+    price: "16.00"
+  - name: Nanaimo Bar
+    price: "7.25"

@@ -1,0 +1,16 @@
+{
+  "_source": "https://supabase.com/docs/guides/auth/debugging/error-codes . Docs do NOT show raw JSON body or per-code HTTP status. Only statuses listed: 403,422,429,500,501 with generic meanings.",
+  "codes": {
+    "invalid_credentials": "Login credentials or grant type not recognized",
+    "user_already_exists": "User with this email or phone already exists",
+    "email_not_confirmed": "Sign-in blocked until email confirmed",
+    "over_request_rate_limit": "Too many requests from this client (IP)",
+    "over_email_send_rate_limit": "Too many emails to this address",
+    "otp_expired": "OTP expired",
+    "refresh_token_not_found": "No session contains the refresh token",
+    "session_not_found": "Session gone (sign-out/deleted)",
+    "weak_password": "Password fails strength criteria"
+  },
+  "http_statuses": { "403": "feature unavailable for user", "422": "cannot process in current state", "429": "rate limited", "500": "auth degraded (e.g. faulty DB trigger)", "501": "feature not enabled" },
+  "raw_body_shape": "UNVERIFIED (not in docs fetched). supabase-js exposes error.code and error.status."
+}

@@ -1,0 +1,24 @@
+{
+  "_source": "https://soniox.com/docs/stt/rt/error-handling.mdx ; https://soniox.com/docs/api-reference/stt/websocket-api.mdx",
+  "_status": "VERIFIED. Server sends ONE error message then closes immediately. WS error payload also carries 'tokens': [] per the API reference page. Branch on error_type, not error_message. Full catalog: https://soniox.com/docs/api-reference/errors",
+  "message": {
+    "tokens": [],
+    "error_code": 400,
+    "error_type": "model_not_available",
+    "error_message": "Invalid model specified.",
+    "more_info": "https://soniox.com/docs/api-reference/errors#model-not-available",
+    "request_id": "3d37a3bd-5078-47ee-a369-b204e3bbedda"
+  },
+  "documented_codes": {
+    "400": "invalid_request / model_not_available",
+    "401": "unauthenticated",
+    "402": "balance or budget exhausted",
+    "403": "permission or temp key session expired",
+    "408": "request_timeout (no audio/keepalive for 20 s)",
+    "413": "max_duration_reached (300 min) -> open a new connection",
+    "429": "rate/connection/concurrency limit",
+    "500": "internal_error",
+    "503": "service_unavailable -> start a new request immediately"
+  },
+  "no_close_frame": "Status 1006 (dropped without close frame): reconnect right away; no error JSON."
+}
