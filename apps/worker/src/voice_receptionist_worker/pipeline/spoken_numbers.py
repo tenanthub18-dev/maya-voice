@@ -1,7 +1,7 @@
 """Rewrite digits as English words just before text-to-speech, whatever language the reply is in.
 
 The LLM writes plain digits ($21.95, 10:00 PM, 4165550199); this supplies English words
-("twenty-one dollars and ninety-five cents", "ten P M", digit by digit for phone numbers). The conversation
+("twenty-one dollars ninety-five", "ten P M", digit by digit for phone numbers). The conversation
 context keeps the digits. Registered as a Pipecat TTS text transform:
 apps/worker/.venv/lib/python3.12/site-packages/pipecat/utils/text/transforms/text_transform.py
 Pronunciation within the configured primary language still needs native listening checks:
@@ -71,6 +71,8 @@ def _price(match: re.Match[str]) -> str:
     dollars, cents = int(match.group(1).replace(",", "")), int(match.group(2) or "0")
     if not cents:
         return f"{_words(dollars)} dollar{'s' if dollars != 1 else ''}"
+    if dollars >= 1 and cents >= 10:
+        return f"{_words(dollars)} dollar{'s' if dollars != 1 else ''} {_words(cents)}"
     spoken_cents = f"{_words(cents)} cent{'s' if cents != 1 else ''}"
     return (f"{_words(dollars)} dollar{'s' if dollars != 1 else ''} and " if dollars else "") + spoken_cents
 

@@ -6,9 +6,9 @@ from voice_receptionist_worker.pipeline.spoken_numbers import speak_numbers_in_e
 @pytest.mark.parametrize(
     ("text", "expected"),
     [
-        ("$21.95", "twenty-one dollars and ninety-five cents"),
-        ("16.95 $", "sixteen dollars and ninety-five cents"),
-        ("16,95$", "sixteen dollars and ninety-five cents"),
+        ("$21.95", "twenty-one dollars ninety-five"),
+        ("16.95 $", "sixteen dollars ninety-five"),
+        ("16,95$", "sixteen dollars ninety-five"),
         ("12 $", "twelve dollars"),
         ("$16", "sixteen dollars"),
         ("$1", "one dollar"),
@@ -22,12 +22,34 @@ from voice_receptionist_worker.pipeline.spoken_numbers import speak_numbers_in_e
         ("(416) 555-0199", "four one six, five five five, zero one nine nine"),
         ("+1 416 555 0199", "four one six, five five five, zero one nine nine"),
         ("1,250 items", "twelve hundred fifty items".replace("twelve hundred", "one thousand two hundred")),
-        ("आज रात 10:00 PM बजे, $21.95 का", "आज रात ten P M बजे, twenty-one dollars and ninety-five cents का"),
+        ("आज रात 10:00 PM बजे, $21.95 का", "आज रात ten P M बजे, twenty-one dollars ninety-five का"),
         ("no digits here", "no digits here"),
     ],
 )
 def test_digits_become_english_words(text, expected):
     assert speak(text) == expected
+
+
+@pytest.mark.parametrize(("text", "expected"), [
+    ("$15.99", "fifteen dollars ninety-nine"),
+    ("$1.50", "one dollar fifty"),
+    ("$1.10", "one dollar ten"),
+    ("$1.09", "one dollar and nine cents"),
+    ("$0.99", "ninety-nine cents"),
+    ("$0.10", "ten cents"),
+    ("$1.00", "one dollar"),
+    ("15.99$", "fifteen dollars ninety-nine"),
+    ("1,50 $", "one dollar fifty"),
+    ("It's $15.99, please.", "It's fifteen dollars ninety-nine, please."),
+    ("Ça coûte 15,99 $.", "Ça coûte fifteen dollars ninety-nine."),
+    ("قیمت $1.50 ہے۔", "قیمت one dollar fifty ہے۔"),
+    ("कीमत $15.99 है।", "कीमत fifteen dollars ninety-nine है।"),
+    ("ਕੀਮਤ 15.99 $ ਹੈ।", "ਕੀਮਤ fifteen dollars ninety-nine ਹੈ।"),
+])
+def test_prices_keep_exact_amounts_in_conversational_speech(text, expected):
+    spoken = speak(text)
+    assert spoken == expected
+    assert speak(spoken) == spoken
 
 
 def test_failures_return_the_original_text(monkeypatch):
@@ -38,21 +60,21 @@ def test_failures_return_the_original_text(monkeypatch):
 
 
 @pytest.mark.parametrize(("text", "expected"), [
-    ("$17.99", "seventeen dollars and ninety-nine cents"),
+    ("$17.99", "seventeen dollars ninety-nine"),
     ("$0.05", "five cents"), ("$0.01", "one cent"),
     ("$1.01", "one dollar and one cent"), ("$0.00", "zero dollars"),
     ("$17.00", "seventeen dollars"),
-    ("It's $17.99.", "It's seventeen dollars and ninety-nine cents."),
-    ("$17.99, please", "seventeen dollars and ninety-nine cents, please"),
+    ("It's $17.99.", "It's seventeen dollars ninety-nine."),
+    ("$17.99, please", "seventeen dollars ninety-nine, please"),
     ("$17.999", "$17.999"),
     ("$1,250.05", "one thousand two hundred fifty dollars and five cents"),
     ("1,250.05 $", "one thousand two hundred fifty dollars and five cents"),
     ("17.99", "seventeen point nine nine"), ("0.05", "zero point zero five"),
     ("1,234.56", "one thousand two hundred thirty-four point five six"),
-    ("قیمت $۱۷.۹۹", "قیمت seventeen dollars and ninety-nine cents"),
-    ("कीमत $१७.९९", "कीमत seventeen dollars and ninety-nine cents"),
+    ("قیمت $۱۷.۹۹", "قیمت seventeen dollars ninety-nine"),
+    ("कीमत $१७.९९", "कीमत seventeen dollars ninety-nine"),
     ("ਮੇਜ਼ ੪", "ਮੇਜ਼ four"), ("మొత్తం ౧౭.౯౯", "మొత్తం seventeen point nine nine"),
-    ("السعر $١٧.٩٩", "السعر seventeen dollars and ninety-nine cents"),
+    ("السعر $١٧.٩٩", "السعر seventeen dollars ninety-nine"),
     ("$１.０５", "one dollar and five cents"),
     ("١٢٬٣٤٥٫٦٧", "twelve thousand three hundred forty-five point six seven"),
     ("+1 (416) 555-0199", "four one six, five five five, zero one nine nine"),
@@ -83,5 +105,5 @@ def test_tts_transform_preserves_the_llm_frame_and_context():
 
     frame = LLMTextFrame("قیمت $17.99")
     assert asyncio.run(tts_text_transform(frame.text, "sentence")) == (
-        "قیمت seventeen dollars and ninety-nine cents")
+        "قیمت seventeen dollars ninety-nine")
     assert frame.text == "قیمت $17.99"

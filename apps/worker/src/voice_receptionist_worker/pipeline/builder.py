@@ -91,7 +91,7 @@ def _create_voice_llm(providers: Mapping[str, Any], system_instruction: str):
     if config["provider"] == "openai":
         # Installed Pipecat 1.14.0: pipecat/services/openai/base_llm.py (Settings.extra is passed
         # to chat.completions). reasoning_effort: https://platform.openai.com/docs/api-reference/chat/create
-        from pipecat.services.openai.llm import OpenAILLMService
+        from .openai_llm import OpenAILLMService
 
         return OpenAILLMService(
             api_key=_require_env("OPENAI_API_KEY"),

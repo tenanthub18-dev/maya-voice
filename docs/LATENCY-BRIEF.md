@@ -1,5 +1,22 @@
 # Latency brief: how a reply is produced and where the time goes
 
+## Conversation quality update — 2026-11-13
+
+Same gpt-4.1-mini/Soniox/Priya, sentence synthesis and turn timings. Compact
+intent-specific instructions shorten advice/planning; English currency readouts
+omit redundant words while retaining exact dollars/cents. Per-call native OpenAI
+clients now close explicitly even when processor cleanup fails. No extra AI
+calls, paid tier, dependency changes or shared caller state.
+
+Brevity/cost improved in fixed replays, but typical measured first-audible replies
+were around1.1–1.3s locally; final public order median1.551s (slowest1.629s,4turns). Consistent sub-second performance is
+not established. Responses WebSocket and Smart Turn trials did not improve the
+required behavior. HTTP/2 connection reuse was observed but reverted because the
+installed client does not reset cancelled streams, leaving cost effects uncertain.
+The final app retains native HTTP/1.1. See QUALITY-CHECKS-2026-11-13.md for the
+measured baselines, discarded trials and final public checks. Native/physical-phone
+gates remain open.
+
 ## Current browser pilot measurement — 2026-11-12
 
 The active cascade uses configured OpenAI gpt-4.1-mini, Soniox stt-rt-v5 /

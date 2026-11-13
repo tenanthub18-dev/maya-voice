@@ -143,3 +143,25 @@
 - Prepared maya-voice README and public-source exclusions; private runtime,
   credentials, synthetic audio/reports, agent state, generated output and local
   session ledgers remain untracked. Initial push requires destination write access.
+
+
+## 2026-11-13 — Concise voice replies and per-call cleanup
+
+- Consolidated conversation instructions; short complete openings, brief sourced
+  recommendations and planning readbacks, with full corrected details/consent
+  and existing language/number/safety rules retained. UI/providers/models/voice
+  and rates unchanged; no extra inference stage or paid service.
+- Shortened English currency pronunciation using the existing exact numeric
+  transform; retained small-cent/sub-dollar wording and raw LLM/tool amounts.
+- Closed isolated native OpenAI clients even on failed or cancelled processor
+  cleanup.530worker tests pass. Rejected HTTP/2 after verifying uncertain upstream
+  cancellation behavior; no added dependencies/model calls/paid tier. No general
+  sub-second/native/physical-phone readiness claim.
+- Fixed cached menu/order replays show shorter complete information, retained
+  corrections and lower partial cost estimates; browser business writes remain
+  disabled. Full results in QUALITY-CHECKS-2026-11-13.md.
+
+- Final native-client public acceptance:5consecutive delayed-audio calls and a
+  corrected order/dashboard/usage/no-business-writes replay passed. Plan16vs29
+  words, correction19vs31. Public median1.551s/slowest1.629s (4samples); response
+  speed remains open. Access code/login and UI unchanged.
